@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace DVLD_DataAccess
+using DVLD_DataAccess;
+namespace DVLD_Business
 {
-    public class Class1
+    public class clsPerson
     {
     }
 }
