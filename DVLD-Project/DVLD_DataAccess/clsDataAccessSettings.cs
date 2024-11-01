@@ -8,6 +8,6 @@ namespace DVLD_DataAccess
 {
     static class clsDataAccessSettings
     {
-        public static string ConnectionString = "Server=LAPTOP-VNSR0OVO;Database=ContactsDB;Trusted_Connection=true;TrustServerCertificate=True";
+        public static string ConnectionString = "Server=LAPTOP-VNSR0OVO;Database=DVLD;Trusted_Connection=true;TrustServerCertificate=True";
     }
 }
