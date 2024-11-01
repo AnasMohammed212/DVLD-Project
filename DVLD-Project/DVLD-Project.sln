@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD", "DVLD\DVLD.csproj", "{AE073016-3512-465B-B2BC-B77AE7213BDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_DataAccess", "DVLD_DataAccess\DVLD_DataAccess.csproj", "{6E1D4825-6204-4434-B009-F681C5064C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_Business", "DVLD_Business\DVLD_Business.csproj", "{BC51CC2D-C703-4864-B901-9B303940D44C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{AE073016-3512-465B-B2BC-B77AE7213BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE073016-3512-465B-B2BC-B77AE7213BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE073016-3512-465B-B2BC-B77AE7213BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1D4825-6204-4434-B009-F681C5064C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1D4825-6204-4434-B009-F681C5064C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1D4825-6204-4434-B009-F681C5064C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1D4825-6204-4434-B009-F681C5064C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC51CC2D-C703-4864-B901-9B303940D44C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC51CC2D-C703-4864-B901-9B303940D44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC51CC2D-C703-4864-B901-9B303940D44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC51CC2D-C703-4864-B901-9B303940D44C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
