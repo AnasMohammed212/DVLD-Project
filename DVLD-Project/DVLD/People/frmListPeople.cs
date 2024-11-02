@@ -25,6 +25,8 @@ namespace DVLD.People
         private void frmListPeople_Load(object sender, EventArgs e)
         {
            dgvPeople.DataSource=_dtPeople;
+           
+            lblRecordCount.Text=dgvPeople.Rows.Count.ToString();
             if (dgvPeople.Rows.Count > 0)
             {
                 dgvPeople.Columns[0].HeaderText = "Person ID";
@@ -66,6 +68,9 @@ namespace DVLD.People
             }
         }
 
-        
+        private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
