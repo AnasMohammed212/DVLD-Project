@@ -72,5 +72,11 @@ namespace DVLD.People
         {
 
         }
+
+        private void btnShowAddUpdatePerson_Click(object sender, EventArgs e)
+        {
+            frmAddUpdatePerson frm=new frmAddUpdatePerson();
+            frm.ShowDialog();
+        }
     }
 }

@@ -121,6 +121,30 @@ namespace DVLD_Business
                 this.Address, this.Phone, this.Email,
                   this.NationalityCountryID, this.ImagePath);
         }
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewPerson())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdatePerson();
+
+            }
+
+            return false;
+        }
         public static DataTable GetAllPeople()
         {
             return clsPersonData.GetAllPeople();

@@ -54,6 +54,14 @@
             this.rtxtAddress = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblPersonID = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbPersonImage = new System.Windows.Forms.PictureBox();
+            this.llRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.llSetImage = new System.Windows.Forms.LinkLabel();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -165,14 +173,14 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
             this.lblTitle.Location = new System.Drawing.Point(256, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(287, 39);
+            this.lblTitle.Size = new System.Drawing.Size(277, 38);
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "Add New Person";
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(95, 209);
+            this.rbMale.Location = new System.Drawing.Point(6, 17);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(58, 20);
             this.rbMale.TabIndex = 13;
@@ -183,7 +191,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(159, 209);
+            this.rbFemale.Location = new System.Drawing.Point(70, 17);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(74, 20);
             this.rbFemale.TabIndex = 14;
@@ -250,7 +258,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(331, 213);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(128, 22);
+            this.txtEmail.Size = new System.Drawing.Size(198, 22);
             this.txtEmail.TabIndex = 21;
             // 
             // label12
@@ -274,7 +282,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(305, 541);
+            this.btnClose.Location = new System.Drawing.Point(369, 541);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 38);
             this.btnClose.TabIndex = 24;
@@ -284,18 +292,84 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(453, 541);
+            this.btnSave.Location = new System.Drawing.Point(559, 541);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 38);
             this.btnSave.TabIndex = 25;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 25);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Person ID";
+            // 
+            // lblPersonID
+            // 
+            this.lblPersonID.AutoSize = true;
+            this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.Location = new System.Drawing.Point(116, 40);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(0, 25);
+            this.lblPersonID.TabIndex = 27;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbMale);
+            this.groupBox1.Controls.Add(this.rbFemale);
+            this.groupBox1.Location = new System.Drawing.Point(88, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(164, 43);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            // 
+            // pbPersonImage
+            // 
+            this.pbPersonImage.Location = new System.Drawing.Point(830, 88);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.Size = new System.Drawing.Size(170, 196);
+            this.pbPersonImage.TabIndex = 29;
+            this.pbPersonImage.TabStop = false;
+            // 
+            // llRemoveImage
+            // 
+            this.llRemoveImage.AutoSize = true;
+            this.llRemoveImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llRemoveImage.Location = new System.Drawing.Point(776, 326);
+            this.llRemoveImage.Name = "llRemoveImage";
+            this.llRemoveImage.Size = new System.Drawing.Size(143, 25);
+            this.llRemoveImage.TabIndex = 30;
+            this.llRemoveImage.TabStop = true;
+            this.llRemoveImage.Text = "Remove Image";
+            // 
+            // llSetImage
+            // 
+            this.llSetImage.AutoSize = true;
+            this.llSetImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llSetImage.Location = new System.Drawing.Point(925, 326);
+            this.llSetImage.Name = "llSetImage";
+            this.llSetImage.Size = new System.Drawing.Size(101, 25);
+            this.llSetImage.TabIndex = 31;
+            this.llSetImage.TabStop = true;
+            this.llSetImage.Text = "Set Image";
             // 
             // frmAddUpdatePerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 619);
+            this.ClientSize = new System.Drawing.Size(1058, 619);
+            this.Controls.Add(this.llSetImage);
+            this.Controls.Add(this.llRemoveImage);
+            this.Controls.Add(this.pbPersonImage);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lblPersonID);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.rtxtAddress);
@@ -307,8 +381,6 @@
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.rbFemale);
-            this.Controls.Add(this.rbMale);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtNationalNo);
             this.Controls.Add(this.label6);
@@ -326,6 +398,9 @@
             this.Name = "frmAddUpdatePerson";
             this.Text = "frmAddUpdatePerson";
             this.Load += new System.EventHandler(this.frmAddUpdatePerson_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +434,11 @@
         private System.Windows.Forms.RichTextBox rtxtAddress;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblPersonID;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pbPersonImage;
+        private System.Windows.Forms.LinkLabel llRemoveImage;
+        private System.Windows.Forms.LinkLabel llSetImage;
     }
 }

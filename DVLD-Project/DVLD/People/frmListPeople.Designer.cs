@@ -32,6 +32,7 @@
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.lblFilterBy = new System.Windows.Forms.Label();
             this.lblRecordCount = new System.Windows.Forms.Label();
+            this.btnShowAddUpdatePerson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,15 +75,28 @@
             this.lblRecordCount.Size = new System.Drawing.Size(0, 32);
             this.lblRecordCount.TabIndex = 3;
             // 
+            // btnShowAddUpdatePerson
+            // 
+            this.btnShowAddUpdatePerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAddUpdatePerson.Location = new System.Drawing.Point(968, 78);
+            this.btnShowAddUpdatePerson.Name = "btnShowAddUpdatePerson";
+            this.btnShowAddUpdatePerson.Size = new System.Drawing.Size(221, 48);
+            this.btnShowAddUpdatePerson.TabIndex = 4;
+            this.btnShowAddUpdatePerson.Text = "Add New Person";
+            this.btnShowAddUpdatePerson.UseVisualStyleBackColor = true;
+            this.btnShowAddUpdatePerson.Click += new System.EventHandler(this.btnShowAddUpdatePerson_Click);
+            // 
             // frmListPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 600);
+            this.Controls.Add(this.btnShowAddUpdatePerson);
             this.Controls.Add(this.lblRecordCount);
             this.Controls.Add(this.lblFilterBy);
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.dgvPeople);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListPeople";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmListPeople";
@@ -99,5 +113,6 @@
         private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.Label lblFilterBy;
         private System.Windows.Forms.Label lblRecordCount;
+        private System.Windows.Forms.Button btnShowAddUpdatePerson;
     }
 }
