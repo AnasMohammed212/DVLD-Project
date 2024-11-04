@@ -22,10 +22,10 @@ namespace DVLD
         {
             
         }
-        frmListPeople frm = new frmListPeople();
+        
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmListPeople frm = new frmListPeople();
             frm.MdiParent = this;
             frm.Show();
         }

@@ -57,9 +57,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblPersonID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.llRemoveImage = new System.Windows.Forms.LinkLabel();
             this.llSetImage = new System.Windows.Forms.LinkLabel();
+            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +187,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
             // 
             // rbFemale
             // 
@@ -198,6 +199,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
             // 
             // label8
             // 
@@ -288,6 +290,7 @@
             this.btnClose.TabIndex = 24;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -329,14 +332,6 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
-            // pbPersonImage
-            // 
-            this.pbPersonImage.Location = new System.Drawing.Point(830, 88);
-            this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(170, 196);
-            this.pbPersonImage.TabIndex = 29;
-            this.pbPersonImage.TabStop = false;
-            // 
             // llRemoveImage
             // 
             this.llRemoveImage.AutoSize = true;
@@ -358,6 +353,16 @@
             this.llSetImage.TabIndex = 31;
             this.llSetImage.TabStop = true;
             this.llSetImage.Text = "Set Image";
+            // 
+            // pbPersonImage
+            // 
+            this.pbPersonImage.InitialImage = null;
+            this.pbPersonImage.Location = new System.Drawing.Point(830, 88);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.Size = new System.Drawing.Size(170, 196);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPersonImage.TabIndex = 29;
+            this.pbPersonImage.TabStop = false;
             // 
             // frmAddUpdatePerson
             // 

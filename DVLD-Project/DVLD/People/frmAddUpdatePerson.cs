@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Properties;
 using DVLD_Business;
 using static DVLD_Business.clsPerson;
 
@@ -50,6 +51,34 @@ namespace DVLD.People
             }
             else
                 lblTitle.Text = "Update Person";
+            //set default image for the person.
+            if (rbMale.Checked)
+                pbPersonImage.Image = Resources.Male_512;
+            else
+                pbPersonImage.Image = Resources.Female_512;
+
+            //hide/show the remove linke incase there is no image for the person.
+            llRemoveImage.Visible = (pbPersonImage.ImageLocation != null);
+
+            //we set the max date to 18 years from today, and set the default value the same.
+            dtpDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
+
+            //should not allow adding age more than 100 years
+            dtpDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
+
+            //this will set default country to jordan.
+            cbCountry.SelectedIndex = cbCountry.FindString("Jordan");
+
+            txtFirstName.Text = "";
+            txtSecondName.Text = "";
+            txtThirdName.Text = "";
+            txtLastName.Text = "";
+            txtNationalNo.Text = "";
+            rbMale.Checked = true;
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            rtxtAddress.Text = "";
         }
         private void _LoadData()
         {
@@ -87,22 +116,22 @@ namespace DVLD.People
             if (_Mode == enMode.Update)
                 _LoadData();
         }
-        private bool _HandlePersonImage()
-        {
-            return false;
-        }
+        //private bool _HandlePersonImage()
+        //{
+        //    return false;
+        //}
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //if (!this.ValidateChildren())
-            //{
-            //    MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return; 
-            //}
-
-            if (!_HandlePersonImage())
+            if (!this.ValidateChildren())
             {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            //if (!_HandlePersonImage())
+            //{
+            //    return;
+            //}
             int NationalityCountryID = clsCountry.Find(cbCountry.Text).ID;
 
             _Person.FirstName = txtFirstName.Text.Trim();
@@ -137,6 +166,23 @@ namespace DVLD.People
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rbMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if(pbPersonImage.ImageLocation == null)
+                pbPersonImage.Image=Resources.Male_512;
+        }
+
+        private void rbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pbPersonImage.ImageLocation == null)
+                pbPersonImage.Image = Resources.Female_512;
         }
         //private void ValidateEmptyTextBox(object sender , CancelEventArgs e)
         //{
