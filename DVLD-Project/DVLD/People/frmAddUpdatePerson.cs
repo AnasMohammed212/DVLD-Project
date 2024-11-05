@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Global_Classes;
 using DVLD.Properties;
 using DVLD_Business;
 using static DVLD_Business.clsPerson;
@@ -116,10 +118,38 @@ namespace DVLD.People
             if (_Mode == enMode.Update)
                 _LoadData();
         }
-        //private bool _HandlePersonImage()
-        //{
-        //    return false;
-        //}
+        private bool _HandlePersonImage()
+        {
+            if (_Person.ImagePath != pbPersonImage.ImageLocation)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
+
+                    }
+                }
+                if (pbPersonImage.ImageLocation != null)
+                {
+                    string SourceImageFile=pbPersonImage.ImageLocation.ToString();
+                    if (clsUtil.CopyImageToProjectImagesFolder(SourceImageFile))
+                    {
+                        pbPersonImage.ImageLocation=SourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
