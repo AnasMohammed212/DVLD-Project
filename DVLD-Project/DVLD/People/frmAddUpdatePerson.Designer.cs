@@ -60,6 +60,7 @@
             this.llRemoveImage = new System.Windows.Forms.LinkLabel();
             this.llSetImage = new System.Windows.Forms.LinkLabel();
             this.pbPersonImage = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             this.SuspendLayout();
@@ -353,6 +354,7 @@
             this.llSetImage.TabIndex = 31;
             this.llSetImage.TabStop = true;
             this.llSetImage.Text = "Set Image";
+            this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
             // 
             // pbPersonImage
             // 
@@ -363,6 +365,10 @@
             this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPersonImage.TabIndex = 29;
             this.pbPersonImage.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmAddUpdatePerson
             // 
@@ -445,5 +451,6 @@
         private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.LinkLabel llRemoveImage;
         private System.Windows.Forms.LinkLabel llSetImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

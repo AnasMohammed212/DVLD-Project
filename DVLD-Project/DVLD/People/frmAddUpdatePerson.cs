@@ -136,7 +136,7 @@ namespace DVLD.People
                 if (pbPersonImage.ImageLocation != null)
                 {
                     string SourceImageFile=pbPersonImage.ImageLocation.ToString();
-                    if (clsUtil.CopyImageToProjectImagesFolder(SourceImageFile))
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))
                     {
                         pbPersonImage.ImageLocation=SourceImageFile;
                         return true;
@@ -158,10 +158,10 @@ namespace DVLD.People
                 return;
             }
 
-            //if (!_HandlePersonImage())
-            //{
-            //    return;
-            //}
+            if (!_HandlePersonImage())
+            {
+                return;
+            }
             int NationalityCountryID = clsCountry.Find(cbCountry.Text).ID;
 
             _Person.FirstName = txtFirstName.Text.Trim();
@@ -213,6 +213,19 @@ namespace DVLD.People
         {
             if (pbPersonImage.ImageLocation == null)
                 pbPersonImage.Image = Resources.Female_512;
+        }
+
+        private void llSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openFileDialog1.Filter= "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string SelectedFilePath=openFileDialog1.FileName;
+                pbPersonImage.ImageLocation=SelectedFilePath;
+                llRemoveImage.Visible=true;
+            }
         }
         //private void ValidateEmptyTextBox(object sender , CancelEventArgs e)
         //{

@@ -21,6 +21,16 @@ namespace DVLD.People
         {
             InitializeComponent();
         }
+        private void _RefreshPeopleList()
+        {
+            _dtAllPeople=clsPerson.GetAllPeople();
+            _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+                                                       "FirstName", "SecondName", "ThirdName", "LastName",
+                                                       "GendorCaption", "DateOfBirth", "CountryName",
+                                                       "Phone", "Email");
+            dgvPeople.DataSource = _dtPeople;
+            lblRecordCount.Text=_dtPeople.Rows.Count.ToString();
+        }
        
         private void frmListPeople_Load(object sender, EventArgs e)
         {
@@ -77,6 +87,7 @@ namespace DVLD.People
         {
             frmAddUpdatePerson frm=new frmAddUpdatePerson();
             frm.ShowDialog();
+            _RefreshPeopleList();
         }
     }
 }
