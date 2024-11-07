@@ -85,7 +85,7 @@ namespace DVLD.People
         private void _LoadData()
         {
             _Person=clsPerson.Find(_PersonID);
-            if (_Person != null)
+            if (_Person == null)
             {
                 MessageBox.Show("No Person with ID = " + _PersonID, "Person Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Close();

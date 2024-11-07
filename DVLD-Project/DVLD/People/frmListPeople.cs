@@ -89,5 +89,33 @@ namespace DVLD.People
             frm.ShowDialog();
             _RefreshPeopleList();
         }
+
+        private void editPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frmAddUpdatePerson frm= new frmAddUpdatePerson((int)dgvPeople.CurrentRow.Cells[0].Value);
+           frm.ShowDialog();
+           _RefreshPeopleList();
+        }
+
+        private void deletePersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete Person [" + dgvPeople.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
+            {
+
+                //Perform Delele and refresh
+                if (clsPerson.DeletePerson((int)dgvPeople.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Person Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshPeopleList();
+                }
+
+                else
+                    MessageBox.Show("Person was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        
     }
 }

@@ -149,7 +149,18 @@ namespace DVLD_Business
         {
             return clsPersonData.GetAllPeople();
         }
-
+        public static bool isPersonExist(int ID)
+        {
+            return clsPersonData.IsPersonExist(ID);
+        }
+        public static bool DeletePerson(int ID)
+        {
+            return clsPersonData.DeletePerson(ID);
+        }
+        public static bool isPersonExist(string NationlNo)
+        {
+            return clsPersonData.IsPersonExist(NationlNo);
+        }
 
     }
 }
