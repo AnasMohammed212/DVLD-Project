@@ -116,6 +116,11 @@ namespace DVLD.People
             }
         }
 
-        
+        private void grgegrrgToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonInfo frm = new frmShowPersonInfo((int)dgvPeople.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
     }
 }

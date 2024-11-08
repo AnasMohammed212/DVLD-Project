@@ -46,7 +46,7 @@
             // 
             this.cbFilterBy.FormattingEnabled = true;
             this.cbFilterBy.Location = new System.Drawing.Point(96, 41);
-            this.cbFilterBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFilterBy.Margin = new System.Windows.Forms.Padding(2);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(143, 21);
             this.cbFilterBy.TabIndex = 1;
@@ -66,7 +66,7 @@
             // txtFilterValue
             // 
             this.txtFilterValue.Location = new System.Drawing.Point(292, 42);
-            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(2);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.Size = new System.Drawing.Size(160, 20);
             this.txtFilterValue.TabIndex = 3;
@@ -81,9 +81,9 @@
             this.gbFilters.Controls.Add(this.label1);
             this.gbFilters.Controls.Add(this.cbFilterBy);
             this.gbFilters.Location = new System.Drawing.Point(2, 16);
-            this.gbFilters.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFilters.Margin = new System.Windows.Forms.Padding(2);
             this.gbFilters.Name = "gbFilters";
-            this.gbFilters.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFilters.Padding = new System.Windows.Forms.Padding(2);
             this.gbFilters.Size = new System.Drawing.Size(730, 81);
             this.gbFilters.TabIndex = 4;
             this.gbFilters.TabStop = false;
@@ -91,10 +91,11 @@
             // 
             // btnAddPerson
             // 
-            this.btnAddPerson.Location = new System.Drawing.Point(598, 41);
-            this.btnAddPerson.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPerson.Location = new System.Drawing.Point(574, 35);
+            this.btnAddPerson.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPerson.Name = "btnAddPerson";
-            this.btnAddPerson.Size = new System.Drawing.Size(56, 19);
+            this.btnAddPerson.Size = new System.Drawing.Size(68, 33);
             this.btnAddPerson.TabIndex = 5;
             this.btnAddPerson.Text = "Add";
             this.btnAddPerson.UseVisualStyleBackColor = true;
@@ -102,10 +103,11 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(506, 41);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.Location = new System.Drawing.Point(492, 35);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(56, 19);
+            this.btnFind.Size = new System.Drawing.Size(68, 33);
             this.btnFind.TabIndex = 4;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -129,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbFilters);
             this.Controls.Add(this.ctrlPersonCard1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctrlPersonCardWithFilter";
             this.Size = new System.Drawing.Size(735, 442);
             this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);

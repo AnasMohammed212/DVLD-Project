@@ -47,7 +47,7 @@ namespace DVLD.People.Controls
             lblPersonID.Text = _Person.PersonID.ToString();
             lblName.Text = _Person.FullName;
             lblNationalNo.Text = _Person.NationalNo;
-            lblGender.Text = _Person.Gender.ToString();
+            lblGender.Text = _Person.Gender==0?"Male": "Female";
             lblPhone.Text = _Person.Phone;
             lblEmail.Text = _Person.Email;
             lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
@@ -104,6 +104,11 @@ namespace DVLD.People.Controls
             frmAddUpdatePerson frm=new frmAddUpdatePerson(_PersonID);
             frm.ShowDialog();
             LoadPersonInfo(PersonID);
+        }
+
+        private void ctrlPersonCard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
