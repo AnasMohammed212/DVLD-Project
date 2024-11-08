@@ -35,7 +35,7 @@ namespace DVLD.People
         private void frmListPeople_Load(object sender, EventArgs e)
         {
            dgvPeople.DataSource=_dtPeople;
-           
+           cbFilterBy.SelectedIndex = 0;
             lblRecordCount.Text=dgvPeople.Rows.Count.ToString();
             if (dgvPeople.Rows.Count > 0)
             {
@@ -80,7 +80,12 @@ namespace DVLD.People
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            txtFilterValue.Visible = (cbFilterBy.Text!="None");
+            if (txtFilterValue.Visible)
+            {
+                txtFilterValue.Text = "";
+                txtFilterValue.Focus();
+            }
         }
 
         private void btnShowAddUpdatePerson_Click(object sender, EventArgs e)
@@ -116,11 +121,87 @@ namespace DVLD.People
             }
         }
 
-        private void grgegrrgToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void showPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmShowPersonInfo frm = new frmShowPersonInfo((int)dgvPeople.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
 
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sorry this Service is Not implemented Yet! ","Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void phonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sorry this Service is Not implemented Yet! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "";
+            switch (cbFilterBy.Text)
+            {
+                case "Person ID":
+                    FilterColumn = "PersonID";
+                    break;
+                case "National No.":
+                    FilterColumn = "NationalNo";
+                    break;
+
+                case "First Name":
+                    FilterColumn = "FirstName";
+                    break;
+
+                case "Second Name":
+                    FilterColumn = "SecondName";
+                    break;
+
+                case "Third Name":
+                    FilterColumn = "ThirdName";
+                    break;
+
+                case "Last Name":
+                    FilterColumn = "LastName";
+                    break;
+
+                case "Nationality":
+                    FilterColumn = "CountryName";
+                    break;
+
+                case "Gendor":
+                    FilterColumn = "GendorCaption";
+                    break;
+
+                case "Phone":
+                    FilterColumn = "Phone";
+                    break;
+
+                case "Email":
+                    FilterColumn = "Email";
+                    break;
+                default:
+                    FilterColumn = "None";
+                    break;
+            }
+            if (txtFilterValue.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                lblRecordCount.Text = dgvPeople.Rows.Count.ToString();
+                return;
+            }
+            if (FilterColumn == "PersonID")
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}]={1}", FilterColumn, txtFilterValue.Text.Trim());
+            else
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'",FilterColumn,txtFilterValue.Text.Trim());
+            lblRecordCount.Text = dgvPeople.Rows.Count.ToString();
+        }
     }
 }
