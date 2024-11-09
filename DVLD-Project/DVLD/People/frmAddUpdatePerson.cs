@@ -274,5 +274,6 @@ namespace DVLD.People
             else
                 errorProvider1.SetError (txtNationalNo,null);
         }
+
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.People;
+using DVLD.Users;
 
 namespace DVLD
 {
@@ -26,8 +27,14 @@ namespace DVLD
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPeople frm = new frmListPeople();
-            frm.MdiParent = this;
-            frm.Show();
+            //frm.MdiParent = this;
+            frm.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListUsers frm = new frmListUsers();  
+            frm.ShowDialog();
         }
     }
 }
