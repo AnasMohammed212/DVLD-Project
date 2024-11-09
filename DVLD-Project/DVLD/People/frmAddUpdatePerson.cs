@@ -173,7 +173,7 @@ namespace DVLD.People
             _Person.Phone = txtPhone.Text.Trim();
             _Person.Address = rtxtAddress.Text.Trim();
             _Person.DateOfBirth = dtpDateOfBirth.Value;
-
+            
             if (rbMale.Checked)
                 _Person.Gender=(short)enGender.Male;
             else
@@ -227,13 +227,52 @@ namespace DVLD.People
                 llRemoveImage.Visible=true;
             }
         }
-        //private void ValidateEmptyTextBox(object sender , CancelEventArgs e)
-        //{
-        //    TextBox Temp = ((TextBox)sender);
-        //    if (string.IsNullOrEmpty(Temp.Text.Trim()))
-        //    {
 
-        //    }
-        //}
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pbPersonImage.ImageLocation = null;
+            if (rbMale.Checked)
+                pbPersonImage.Image = Resources.Male_512;
+            else
+                pbPersonImage.Image = Resources.Female_512;
+            llRemoveImage.Visible = false;
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtEmail.Text.Trim() == "")
+                return;
+            if (!clsValidation.ValidateEmail(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
+            }
+            else
+                errorProvider1.SetError(txtEmail,null);
+        }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo,"The Field is Required");
+                return;
+            }
+            else
+                errorProvider1.SetError(txtNationalNo,null);
+            if (txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.isPersonExist(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel= true;
+                errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
+            }
+            else
+                errorProvider1.SetError (txtNationalNo,null);
+        }
     }
 }
