@@ -49,6 +49,7 @@
             // 
             // dgvPeople
             // 
+            this.dgvPeople.AllowUserToAddRows = false;
             this.dgvPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeople.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvPeople.Location = new System.Drawing.Point(12, 140);

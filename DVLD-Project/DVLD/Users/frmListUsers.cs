@@ -22,6 +22,7 @@ namespace DVLD.Users
         private void frmListUsers_Load(object sender, EventArgs e)
         {
             dgvUsers.DataSource = _dtUsers;
+            lblRecordsCount.Text=dgvUsers.Rows.Count.ToString();
         }
     }
 }
