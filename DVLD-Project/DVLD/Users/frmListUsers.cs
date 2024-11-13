@@ -24,5 +24,18 @@ namespace DVLD.Users
             dgvUsers.DataSource = _dtUsers;
             lblRecordsCount.Text=dgvUsers.Rows.Count.ToString();
         }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frm=new frmAddUpdateUser();
+            frm.ShowDialog();
+        }
+
+        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser Frm1 = new frmAddUpdateUser((int)dgvUsers.CurrentRow.Cells[0].Value);
+            Frm1.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
     }
 }
