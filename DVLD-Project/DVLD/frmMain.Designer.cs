@@ -60,7 +60,7 @@
             this.accountSettingsToolStripMenuItem});
             this.msMainMenue.Location = new System.Drawing.Point(0, 0);
             this.msMainMenue.Name = "msMainMenue";
-            this.msMainMenue.Size = new System.Drawing.Size(1266, 78);
+            this.msMainMenue.Size = new System.Drawing.Size(632, 78);
             this.msMainMenue.TabIndex = 1;
             this.msMainMenue.Text = "menuStrip1";
             // 
@@ -184,7 +184,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1266, 636);
+            this.ClientSize = new System.Drawing.Size(632, 520);
             this.Controls.Add(this.msMainMenue);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msMainMenue;

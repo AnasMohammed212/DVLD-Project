@@ -41,6 +41,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.cmsUser.SuspendLayout();
             this.SuspendLayout();
@@ -149,12 +150,24 @@
             this.phonToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.phonToolStripMenuItem.Text = "Phone Call";
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(955, 508);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(131, 44);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmListUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 557);
             this.ContextMenuStrip = this.cmsUser;
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddNewUser);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.dgvUsers);
@@ -184,5 +197,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phonToolStripMenuItem;
+        private System.Windows.Forms.Button btnClose;
     }
 }

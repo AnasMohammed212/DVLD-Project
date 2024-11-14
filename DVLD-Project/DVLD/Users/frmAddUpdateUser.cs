@@ -14,8 +14,8 @@ namespace DVLD.Users
     public partial class frmAddUpdateUser : Form
     {
         public enum enMode {AddNew=0,Update=1 };
-        enMode _Mode;
-        int _UserID = -1;
+        private enMode _Mode;
+        private int _UserID = -1;
         clsUser _User;
         public frmAddUpdateUser()
         {
@@ -60,6 +60,12 @@ namespace DVLD.Users
                 this.Close();
                 return;
             }
+            lblUserID.Text = _User.UserID.ToString();
+            txtUserName.Text = _User.UserName;
+            txtPassword.Text = _User.Password;
+            txtConfirmPassword.Text = _User.Password;
+            chkIsActive.Checked=_User.IsActive;
+            ctrlPersonCardWithFilter1.LoadPersonInfo(_User.PersonID);
         }
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
@@ -77,7 +83,59 @@ namespace DVLD.Users
 
         private void btnPersonInfoNext_Click(object sender, EventArgs e)
         {
-            tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+            if (_Mode == enMode.Update)
+            {
+                tpLoginInfo.Enabled = true;
+                btnSave.Enabled = true;
+                tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+                return;
+            }     
+            if (ctrlPersonCardWithFilter1.PersonID != -1)
+            {
+                if (clsUser.IsUserExist(ctrlPersonCardWithFilter1.PersonID))
+                {
+                    MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ctrlPersonCardWithFilter1.FilterFocus();
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    tpLoginInfo.Enabled = true;
+                    tcUserInfo.SelectedTab = tcUserInfo.TabPages["tpLoginInfo"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ctrlPersonCardWithFilter1.FilterFocus();
+            }
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(!this.ValidateChildren())
+            {
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the error",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            _User.PersonID=ctrlPersonCardWithFilter1.PersonID;
+            _User.UserName=txtUserName.Text.Trim();
+            _User.Password=txtPassword.Text.Trim();
+            _User.IsActive=chkIsActive.Checked;
+
+            if (_User.Save())
+            {
+                lblUserID.Text = _User.UserID.ToString();
+                _Mode = enMode.Update;
+                lblTitle.Text = "Update User";
+                this.Text = "Update User";
+
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

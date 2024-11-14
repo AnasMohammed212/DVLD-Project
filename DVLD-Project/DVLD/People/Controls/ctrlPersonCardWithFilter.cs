@@ -71,7 +71,7 @@ namespace DVLD.People.Controls
                 // Raise the event with a parameter
                 OnPersonSelected(ctrlPersonCard1.PersonID);
         }
-        public void LoadPersonInfo()
+        public void LoadPersonInfo(int PersonID)
         {
             cbFilterBy.SelectedIndex = 1;
             txtFilterValue.Text =PersonID.ToString();
@@ -118,6 +118,11 @@ namespace DVLD.People.Controls
                 e.Cancel= false;
                 errorProvider1.SetError(txtFilterValue, null);
             }
+            //if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
+            //{
+            //    e.Cancel = true;
+            //    errorProvider1.SetError(txtFilterValue, "person does not exist");
+            //}
         }
 
         private void btnAddPerson_Click(object sender, EventArgs e)

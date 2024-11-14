@@ -50,7 +50,7 @@ namespace DVLD.People.Controls
             lblGender.Text = _Person.Gender==0?"Male": "Female";
             lblPhone.Text = _Person.Phone;
             lblEmail.Text = _Person.Email;
-            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString(); 
             lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
             lblAddress.Text = _Person.Address;
             _LoadPersonImage();

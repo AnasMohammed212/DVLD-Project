@@ -18,7 +18,13 @@ namespace DVLD.Users
         {
             InitializeComponent();
         }
+        private void _RefreshUsersList()
+        {
+            _dtUsers = clsUser.GetAllUsers();
+            dgvUsers.DataSource = _dtUsers;
+            lblRecordsCount.Text=dgvUsers.Rows.Count.ToString();
 
+        }
         private void frmListUsers_Load(object sender, EventArgs e)
         {
             dgvUsers.DataSource = _dtUsers;
@@ -29,6 +35,8 @@ namespace DVLD.Users
         {
             frmAddUpdateUser frm=new frmAddUpdateUser();
             frm.ShowDialog();
+            frmListUsers_Load(null, null);
+            _RefreshUsersList();
         }
 
         private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +44,12 @@ namespace DVLD.Users
             frmAddUpdateUser Frm1 = new frmAddUpdateUser((int)dgvUsers.CurrentRow.Cells[0].Value);
             Frm1.ShowDialog();
             frmListUsers_Load(null, null);
+            _RefreshUsersList();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

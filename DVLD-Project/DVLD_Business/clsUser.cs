@@ -60,7 +60,7 @@ namespace DVLD_Business
         private bool _AddNewUser()
         {
             this.UserID = clsUserData.AddNewUser(this.PersonID,this.UserName,this.Password,this.IsActive);
-            return (this.UserID!=-1);
+            return (this.UserID != -1);
         }
         private bool _UpdateUser()
         {

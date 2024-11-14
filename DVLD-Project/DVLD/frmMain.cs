@@ -36,5 +36,10 @@ namespace DVLD
             frmListUsers frm = new frmListUsers();  
             frm.ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
