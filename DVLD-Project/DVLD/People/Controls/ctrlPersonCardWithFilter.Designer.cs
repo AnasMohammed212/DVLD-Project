@@ -136,7 +136,7 @@
             this.Controls.Add(this.ctrlPersonCard1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ctrlPersonCardWithFilter";
-            this.Size = new System.Drawing.Size(1054, 689);
+            this.Size = new System.Drawing.Size(985, 524);
             this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);
             this.gbFilters.ResumeLayout(false);
             this.gbFilters.PerformLayout();

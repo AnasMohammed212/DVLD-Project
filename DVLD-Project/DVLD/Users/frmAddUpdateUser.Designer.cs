@@ -31,8 +31,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.btnPersonInfoNext = new System.Windows.Forms.Button();
             this.ctrlPersonCardWithFilter1 = new DVLD.People.Controls.ctrlPersonCardWithFilter();
+            this.btnPersonInfoNext = new System.Windows.Forms.Button();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.chkIsActive = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -81,8 +81,8 @@
             // 
             // tpPersonalInfo
             // 
-            this.tpPersonalInfo.Controls.Add(this.btnPersonInfoNext);
             this.tpPersonalInfo.Controls.Add(this.ctrlPersonCardWithFilter1);
+            this.tpPersonalInfo.Controls.Add(this.btnPersonInfoNext);
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 25);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -91,26 +91,26 @@
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
             // 
+            // ctrlPersonCardWithFilter1
+            // 
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(6, 0);
+            this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(883, 534);
+            this.ctrlPersonCardWithFilter1.TabIndex = 3;
+            // 
             // btnPersonInfoNext
             // 
             this.btnPersonInfoNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonInfoNext.Location = new System.Drawing.Point(953, 473);
+            this.btnPersonInfoNext.Location = new System.Drawing.Point(1008, 475);
             this.btnPersonInfoNext.Name = "btnPersonInfoNext";
             this.btnPersonInfoNext.Size = new System.Drawing.Size(131, 44);
             this.btnPersonInfoNext.TabIndex = 2;
             this.btnPersonInfoNext.Text = "Next";
             this.btnPersonInfoNext.UseVisualStyleBackColor = true;
             this.btnPersonInfoNext.Click += new System.EventHandler(this.btnPersonInfoNext_Click);
-            // 
-            // ctrlPersonCardWithFilter1
-            // 
-            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(6, 5);
-            this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
-            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1078, 463);
-            this.ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
             // tpLoginInfo
             // 
@@ -314,7 +314,6 @@
         private System.Windows.Forms.TabControl tcUserInfo;
         private System.Windows.Forms.TabPage tpPersonalInfo;
         private System.Windows.Forms.TabPage tpLoginInfo;
-        private People.Controls.ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPersonInfoNext;
         private System.Windows.Forms.Button btnClose;
@@ -331,5 +330,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.CheckBox chkIsActive;
+        private People.Controls.ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;
     }
 }

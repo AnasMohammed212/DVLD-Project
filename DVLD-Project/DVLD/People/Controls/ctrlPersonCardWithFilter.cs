@@ -14,11 +14,11 @@ namespace DVLD.People.Controls
     public partial class ctrlPersonCardWithFilter : UserControl
     {
         public event Action<int> OnPersonSelected;
-        protected virtual void PersonSelected(int Person)
+        protected virtual void PersonSelected(int PersonID)
         {
             Action<int> handler = OnPersonSelected;
             if (handler != null)
-                handler(Person);
+                handler(PersonID);
         }
         private bool _ShowAddPerson = true;
         public bool ShowAddPerson
@@ -68,8 +68,11 @@ namespace DVLD.People.Controls
                     break;
             }
             if (OnPersonSelected != null && FilterEnabled)
+            {
                 // Raise the event with a parameter
                 OnPersonSelected(ctrlPersonCard1.PersonID);
+            }
+                
         }
         public void LoadPersonInfo(int PersonID)
         {

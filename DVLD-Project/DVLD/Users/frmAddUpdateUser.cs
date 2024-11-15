@@ -92,7 +92,7 @@ namespace DVLD.Users
             }     
             if (ctrlPersonCardWithFilter1.PersonID != -1)
             {
-                if (clsUser.IsUserExist(ctrlPersonCardWithFilter1.PersonID))
+                if (clsUser.IsUserExistForPersonID(ctrlPersonCardWithFilter1.PersonID))
                 {
                     MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlPersonCardWithFilter1.FilterFocus();
@@ -120,7 +120,8 @@ namespace DVLD.Users
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            _User.PersonID=ctrlPersonCardWithFilter1.PersonID;
+            //_User.PersonID=ctrlPersonCardWithFilter1.PersonID;
+            _User.PersonID = ctrlPersonCardWithFilter1.PersonID;
             _User.UserName=txtUserName.Text.Trim();
             _User.Password=txtPassword.Text.Trim();
             _User.IsActive=chkIsActive.Checked;

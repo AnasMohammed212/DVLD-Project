@@ -25,7 +25,7 @@ namespace DVLD.People.Controls
         {
             InitializeComponent();
         }
-        private void ResetPersonInfo()
+        public void ResetPersonInfo()
         {
             _PersonID = -1;
             lblPersonID.Text = "[????]";
@@ -107,6 +107,11 @@ namespace DVLD.People.Controls
         }
 
         private void ctrlPersonCard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
