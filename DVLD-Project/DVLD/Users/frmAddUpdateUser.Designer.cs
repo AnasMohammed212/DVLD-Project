@@ -65,9 +65,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
             this.lblTitle.Location = new System.Drawing.Point(418, 33);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(277, 38);
+            this.lblTitle.Size = new System.Drawing.Size(241, 38);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Add New Person";
+            this.lblTitle.Text = "Add New User";
             // 
             // tcUserInfo
             // 

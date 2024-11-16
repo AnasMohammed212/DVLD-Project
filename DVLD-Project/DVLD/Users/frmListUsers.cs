@@ -43,13 +43,19 @@ namespace DVLD.Users
         {
             frmAddUpdateUser Frm1 = new frmAddUpdateUser((int)dgvUsers.CurrentRow.Cells[0].Value);
             Frm1.ShowDialog();
-            frmListUsers_Load(null, null);
-            _RefreshUsersList();
+            //frmListUsers_Load(null, null);
+            //_RefreshUsersList();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void showUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frm = new frmUserInfo((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

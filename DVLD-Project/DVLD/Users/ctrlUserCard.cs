@@ -11,12 +11,12 @@ using DVLD_Business;
 
 namespace DVLD.Users
 {
-    public partial class ctrlUserControl : UserControl
+    public partial class ctrlUserCard : UserControl
     {
         private clsUser _User;
         private int _UserID;
         public int UserID { get { return _UserID; } }
-        public ctrlUserControl()
+        public ctrlUserCard()
         {
             InitializeComponent();  
         }
@@ -30,6 +30,7 @@ namespace DVLD.Users
                 MessageBox.Show("No User with UserID = " + UserID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            _FillUserInfo();
         }
         private void _ResetPersonInfo()
         {
@@ -51,6 +52,11 @@ namespace DVLD.Users
                 lblIsActive.Text = "No";
         }
         private void ctrlUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctrlPersonCard1_Load(object sender, EventArgs e)
         {
 
         }

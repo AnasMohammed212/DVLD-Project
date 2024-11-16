@@ -1,6 +1,6 @@
 ﻿namespace DVLD.Users
 {
-    partial class ctrlUserControl
+    partial class ctrlUserCard
     {
         /// <summary> 
         /// Required designer variable.
@@ -45,6 +45,7 @@
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
             this.ctrlPersonCard1.Size = new System.Drawing.Size(883, 406);
             this.ctrlPersonCard1.TabIndex = 0;
+            this.ctrlPersonCard1.Load += new System.EventHandler(this.ctrlPersonCard1_Load);
             // 
             // label2
             // 
@@ -90,31 +91,34 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserID.Location = new System.Drawing.Point(176, 478);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(42, 16);
+            this.lblUserID.Size = new System.Drawing.Size(67, 25);
             this.lblUserID.TabIndex = 25;
             this.lblUserID.Text = "?????";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.Location = new System.Drawing.Point(414, 478);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(42, 16);
+            this.lblUserName.Size = new System.Drawing.Size(67, 25);
             this.lblUserName.TabIndex = 26;
             this.lblUserName.Text = "?????";
             // 
             // lblIsActive
             // 
             this.lblIsActive.AutoSize = true;
-            this.lblIsActive.Location = new System.Drawing.Point(636, 478);
+            this.lblIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsActive.Location = new System.Drawing.Point(621, 478);
             this.lblIsActive.Name = "lblIsActive";
-            this.lblIsActive.Size = new System.Drawing.Size(42, 16);
+            this.lblIsActive.Size = new System.Drawing.Size(67, 25);
             this.lblIsActive.TabIndex = 27;
             this.lblIsActive.Text = "?????";
             // 
-            // ctrlUserControl
+            // ctrlUserCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +130,7 @@
             this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ctrlPersonCard1);
-            this.Name = "ctrlUserControl";
+            this.Name = "ctrlUserCard";
             this.Size = new System.Drawing.Size(948, 587);
             this.Load += new System.EventHandler(this.ctrlUserControl_Load);
             this.ResumeLayout(false);

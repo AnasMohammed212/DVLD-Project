@@ -76,8 +76,8 @@ namespace DVLD.People.Controls
         }
         public void LoadPersonInfo(int PersonID)
         {
-            cbFilterBy.SelectedIndex = 1;
-            txtFilterValue.Text =PersonID.ToString();
+            //cbFilterBy.SelectedIndex = 1;
+            //txtFilterValue.Text =PersonID.ToString();
             FindNow();
         }
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
@@ -106,7 +106,7 @@ namespace DVLD.People.Controls
 
         private void ctrlPersonCardWithFilter_Load(object sender, EventArgs e)
         {
-            //cbFilterBy.SelectedIndex = 0;
+            cbFilterBy.SelectedIndex = 0;
             txtFilterValue.Focus();
         }
 
