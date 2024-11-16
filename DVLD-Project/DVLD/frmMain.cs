@@ -41,5 +41,10 @@ namespace DVLD
         {
             this.Close();
         }
+
+        private void changeUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
