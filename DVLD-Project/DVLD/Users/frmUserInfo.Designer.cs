@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlUserCard1 = new DVLD.Users.ctrlUserCard();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ctrlUserCard1 = new DVLD.Users.ctrlUserCard();
             this.SuspendLayout();
-            // 
-            // ctrlUserCard1
-            // 
-            this.ctrlUserCard1.Location = new System.Drawing.Point(22, 12);
-            this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(948, 542);
-            this.ctrlUserCard1.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -50,11 +43,18 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ctrlUserCard1
+            // 
+            this.ctrlUserCard1.Location = new System.Drawing.Point(22, 12);
+            this.ctrlUserCard1.Name = "ctrlUserCard1";
+            this.ctrlUserCard1.Size = new System.Drawing.Size(948, 613);
+            this.ctrlUserCard1.TabIndex = 0;
+            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 589);
+            this.ClientSize = new System.Drawing.Size(1115, 659);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
             this.Name = "frmUserInfo";

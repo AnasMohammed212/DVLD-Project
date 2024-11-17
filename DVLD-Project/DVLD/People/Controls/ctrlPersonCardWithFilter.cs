@@ -60,24 +60,26 @@ namespace DVLD.People.Controls
             {
                 case "Person ID":
                     ctrlPersonCard1.LoadPersonInfo(int.Parse(txtFilterValue.Text));
+
                     break;
-                case "National No":
+
+                case "National No.":
                     ctrlPersonCard1.LoadPersonInfo(txtFilterValue.Text);
                     break;
+
                 default:
                     break;
             }
+
             if (OnPersonSelected != null && FilterEnabled)
-            {
                 // Raise the event with a parameter
                 OnPersonSelected(ctrlPersonCard1.PersonID);
-            }
-                
+
         }
         public void LoadPersonInfo(int PersonID)
         {
-            //cbFilterBy.SelectedIndex = 1;
-            //txtFilterValue.Text =PersonID.ToString();
+            cbFilterBy.SelectedIndex = 0;
+            txtFilterValue.Text = PersonID.ToString();
             FindNow();
         }
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)

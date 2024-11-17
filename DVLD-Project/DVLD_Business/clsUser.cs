@@ -85,7 +85,7 @@ namespace DVLD_Business
         }
         public static bool DeleteUser(int UserID)
         {
-            return clsUser.DeleteUser(UserID);
+            return clsUserData.DeleteUser(UserID);
         }
         public static bool IsUserExist(int UserID)
         {
