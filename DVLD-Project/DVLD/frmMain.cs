@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Global_Classes;
+using DVLD.Login;
 using DVLD.People;
 using DVLD.Users;
 
@@ -14,9 +16,11 @@ namespace DVLD
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        frmLogin _frmLogin;
+        public frmMain( frmLogin frm)
         {
             InitializeComponent();
+            _frmLogin = frm;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -45,6 +49,13 @@ namespace DVLD
         private void changeUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            _frmLogin.Show();
+            this.Close();
         }
     }
 }
