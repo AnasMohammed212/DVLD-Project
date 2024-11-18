@@ -48,14 +48,25 @@ namespace DVLD
 
         private void changeUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmChangePassword frm=new frmChangePassword(clsGlobal.CurrentUser.UserID);
+            frm.ShowDialog();
         }
-
+        private bool _CloseApplication = true;
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clsGlobal.CurrentUser = null;
+            _CloseApplication = false;
             _frmLogin.Show();
             this.Close();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_CloseApplication)
+            {
+                _frmLogin.Close();
+                return;
+            }
         }
     }
 }
