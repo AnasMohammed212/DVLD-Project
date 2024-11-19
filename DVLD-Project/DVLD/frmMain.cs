@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Applications.Application_Types;
 using DVLD.Global_Classes;
 using DVLD.Login;
 using DVLD.People;
@@ -63,6 +64,18 @@ namespace DVLD
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frm=new frmUserInfo(clsGlobal.CurrentUser.UserID);
+            frm.Show();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListApplicationTypes frm=new frmListApplicationTypes();
+            frm.Show();
         }
     }
 }
