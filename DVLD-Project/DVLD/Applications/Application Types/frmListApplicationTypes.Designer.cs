@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
+            this.dgvListApplicationTypes = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblRecordsCount = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmsApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListApplicationTypes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cmsApplicationTypes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListApplicationTypes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 304);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(821, 287);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvListApplicationTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListApplicationTypes.ContextMenuStrip = this.cmsApplicationTypes;
+            this.dgvListApplicationTypes.Location = new System.Drawing.Point(43, 304);
+            this.dgvListApplicationTypes.Name = "dgvListApplicationTypes";
+            this.dgvListApplicationTypes.RowHeadersWidth = 51;
+            this.dgvListApplicationTypes.RowTemplate.Height = 24;
+            this.dgvListApplicationTypes.Size = new System.Drawing.Size(821, 287);
+            this.dgvListApplicationTypes.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -89,6 +94,20 @@
             this.lblRecordsCount.TabIndex = 4;
             this.lblRecordsCount.Text = "?????";
             // 
+            // cmsApplicationTypes
+            // 
+            this.cmsApplicationTypes.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem});
+            this.cmsApplicationTypes.Name = "cmsApplicationTypes";
+            this.cmsApplicationTypes.Size = new System.Drawing.Size(221, 28);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.editToolStripMenuItem.Text = "Edit Application Type";
+            // 
             // frmListApplicationTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -98,12 +117,13 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListApplicationTypes);
             this.Name = "frmListApplicationTypes";
             this.Text = "frmListApplicationTypes";
             this.Load += new System.EventHandler(this.frmListApplicationTypes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListApplicationTypes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cmsApplicationTypes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,10 +131,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListApplicationTypes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblRecordsCount;
+        private System.Windows.Forms.ContextMenuStrip cmsApplicationTypes;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
     }
 }

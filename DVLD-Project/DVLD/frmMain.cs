@@ -74,7 +74,17 @@ namespace DVLD
 
         private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListApplicationTypes frm=new frmListApplicationTypes();
+           
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmListApplicationTypes frm = new frmListApplicationTypes();
             frm.Show();
         }
     }
