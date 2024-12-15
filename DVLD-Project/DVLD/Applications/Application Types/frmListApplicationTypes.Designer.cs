@@ -119,7 +119,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvListApplicationTypes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmListApplicationTypes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListApplicationTypes";
             this.Load += new System.EventHandler(this.frmListApplicationTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListApplicationTypes)).EndInit();

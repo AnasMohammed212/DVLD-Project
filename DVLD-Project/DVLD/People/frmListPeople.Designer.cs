@@ -201,7 +201,7 @@
             this.Controls.Add(this.lblFilterBy);
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.dgvPeople);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmListPeople";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
