@@ -18,12 +18,11 @@ namespace DVLD.Applications.Application_Types
         {
             InitializeComponent();
         }
-
-        private void frmListApplicationTypes_Load(object sender, EventArgs e)
+        private void _RefreshApplicationTypesList()
         {
-            _dtAllApplicationTypes=clsApplicationType.GetAllApplicationTypes();
+            _dtAllApplicationTypes = clsApplicationType.GetAllApplicationTypes();
             dgvListApplicationTypes.DataSource = _dtAllApplicationTypes;
-            lblRecordsCount.Text=dgvListApplicationTypes.Rows.Count.ToString();
+            lblRecordsCount.Text = dgvListApplicationTypes.Rows.Count.ToString();
             if (dgvListApplicationTypes.Rows.Count > 0)
             {
                 dgvListApplicationTypes.Columns[0].HeaderText = "ID";
@@ -33,6 +32,11 @@ namespace DVLD.Applications.Application_Types
                 dgvListApplicationTypes.Columns[2].HeaderText = "Fees";
                 dgvListApplicationTypes.Columns[2].Width = 100;
             }
+        }
+
+        private void frmListApplicationTypes_Load(object sender, EventArgs e)
+        {
+            _RefreshApplicationTypesList();
             
         }
 
@@ -45,6 +49,7 @@ namespace DVLD.Applications.Application_Types
         {
             frmEditApplicationType frm = new frmEditApplicationType((int)dgvListApplicationTypes.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _RefreshApplicationTypesList();
         }
     }
 }

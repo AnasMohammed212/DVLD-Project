@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvListApplicationTypes = new System.Windows.Forms.DataGridView();
+            this.cmsApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblRecordsCount = new System.Windows.Forms.Label();
-            this.cmsApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListApplicationTypes)).BeginInit();
             this.cmsApplicationTypes.SuspendLayout();
@@ -51,6 +51,21 @@
             this.dgvListApplicationTypes.RowTemplate.Height = 24;
             this.dgvListApplicationTypes.Size = new System.Drawing.Size(821, 287);
             this.dgvListApplicationTypes.TabIndex = 0;
+            // 
+            // cmsApplicationTypes
+            // 
+            this.cmsApplicationTypes.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem});
+            this.cmsApplicationTypes.Name = "cmsApplicationTypes";
+            this.cmsApplicationTypes.Size = new System.Drawing.Size(221, 28);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.editToolStripMenuItem.Text = "Edit Application Type";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -82,21 +97,6 @@
             this.lblRecordsCount.Size = new System.Drawing.Size(67, 25);
             this.lblRecordsCount.TabIndex = 4;
             this.lblRecordsCount.Text = "?????";
-            // 
-            // cmsApplicationTypes
-            // 
-            this.cmsApplicationTypes.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem});
-            this.cmsApplicationTypes.Name = "cmsApplicationTypes";
-            this.cmsApplicationTypes.Size = new System.Drawing.Size(221, 56);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.editToolStripMenuItem.Text = "Edit Application Type";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 

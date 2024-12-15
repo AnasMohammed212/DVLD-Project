@@ -84,7 +84,7 @@ namespace DVLD.Applications.Application_Types
             };
 
 
-            if (clsValidation.IsNumber(txtFees.Text))
+            if (!clsValidation.IsNumber(txtFees.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtFees, "Invalid Number.");
@@ -93,6 +93,11 @@ namespace DVLD.Applications.Application_Types
             {
                 errorProvider1.SetError(txtFees, null);
             };
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
