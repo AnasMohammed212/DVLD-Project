@@ -43,7 +43,7 @@ namespace DVLD.Tests.Tests_Types
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEditTestType frm = new frmEditTestType((int)(clsTestType.enTestType)dgvListTestTypes.CurrentRow.Cells[0].Value);
+            frmEditTestType frm = new frmEditTestType((clsTestType.enTestType)dgvListTestTypes.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             frmListTestTypes_Load(null, null);
         }

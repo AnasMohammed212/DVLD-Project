@@ -53,6 +53,7 @@
             // dgvListTestTypes
             // 
             this.dgvListTestTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListTestTypes.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvListTestTypes.Location = new System.Drawing.Point(42, 335);
             this.dgvListTestTypes.Name = "dgvListTestTypes";
             this.dgvListTestTypes.RowHeadersWidth = 51;
@@ -87,12 +88,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 28);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.editToolStripMenuItem.Text = "Edit Test Type";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 

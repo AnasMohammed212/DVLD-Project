@@ -89,5 +89,10 @@ namespace DVLD
             frmListApplicationTypes frm = new frmListApplicationTypes();
             frm.Show();
         }
+
+        private void drivingLicensesServicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
