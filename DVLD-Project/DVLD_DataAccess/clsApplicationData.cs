@@ -150,7 +150,7 @@ namespace DVLD_DataAccess
             return ApplicationID;
         }
         public static bool UpdateApplication(int ApplicationID,int ApplicantPersonID,DateTime ApplicationDate,int ApplicationTypeID,
-           byte ApplicationStatus,int LastStatusDate,float PaidFees,int CreatedByUserID)
+           byte ApplicationStatus,DateTime LastStatusDate,float PaidFees,int CreatedByUserID)
         {
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
