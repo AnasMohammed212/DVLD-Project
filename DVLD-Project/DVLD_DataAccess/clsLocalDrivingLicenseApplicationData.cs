@@ -206,11 +206,9 @@ namespace DVLD_DataAccess
                             where LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
 
             SqlCommand command = new SqlCommand(query, connection);
-
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
             command.Parameters.AddWithValue("ApplicationID", ApplicationID);
             command.Parameters.AddWithValue("LicenseClassID", LicenseClassID);
-
 
             try
             {
@@ -266,6 +264,11 @@ namespace DVLD_DataAccess
             return (rowsAffected > 0);
 
         }
+
+
+
+
+        ///
         public static bool DoesPassTestType(int LocalDrivingLicenseApplicationID, int TestTypeID)
 
         {
