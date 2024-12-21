@@ -71,8 +71,7 @@ namespace DVLD.People.Controls
                     break;
             }
 
-            if (OnPersonSelected != null && FilterEnabled)
-                // Raise the event with a parameter
+            if (OnPersonSelected != null && FilterEnabled)  
                 OnPersonSelected(ctrlPersonCard1.PersonID);
 
         }
@@ -123,11 +122,12 @@ namespace DVLD.People.Controls
                 e.Cancel= false;
                 errorProvider1.SetError(txtFilterValue, null);
             }
-            //if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
-            //{
-            //    e.Cancel = true;
-            //    errorProvider1.SetError(txtFilterValue, "person does not exist");
-            //}
+            if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFilterValue, "person does not exist");
+
+            }
         }
 
         private void btnAddPerson_Click(object sender, EventArgs e)
@@ -138,8 +138,6 @@ namespace DVLD.People.Controls
         }
         private void DataBackEvent(object sender, int PersonID)
         {
-            // Handle the data received
-
             cbFilterBy.SelectedIndex = 1;
             txtFilterValue.Text = PersonID.ToString();
             ctrlPersonCard1.LoadPersonInfo(PersonID);

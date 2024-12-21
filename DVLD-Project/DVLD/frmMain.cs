@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Applications.Application_Types;
+using DVLD.Applications.Local_Driving_License;
 using DVLD.Global_Classes;
 using DVLD.Login;
 using DVLD.People;
@@ -93,6 +94,12 @@ namespace DVLD
         private void drivingLicensesServicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateLocalDrivingLicenseApplication frm=new frmAddUpdateLocalDrivingLicenseApplication();
+            frm.Show();
         }
     }
 }
