@@ -119,15 +119,15 @@ namespace DVLD.People.Controls
             }
             else
             {
-                e.Cancel= false;
+                //e.Cancel= false;
                 errorProvider1.SetError(txtFilterValue, null);
             }
-            if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtFilterValue, "person does not exist");
+            //if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
+            //{
+            //    e.Cancel = true;
+            //    errorProvider1.SetError(txtFilterValue, "person does not exist");
 
-            }
+            //}
         }
 
         private void btnAddPerson_Click(object sender, EventArgs e)

@@ -30,8 +30,6 @@ namespace DVLD_DataAccess
 
                 if (reader.Read())
                 {
-
-                    // The record was found
                     isFound = true;
 
                     CountryName = (string)reader["CountryName"];
@@ -39,7 +37,6 @@ namespace DVLD_DataAccess
                 }
                 else
                 {
-                    // The record was not found
                     isFound = false;
                 }
 
@@ -79,16 +76,12 @@ namespace DVLD_DataAccess
 
                 if (reader.Read())
                 {
-
-                    // The record was found
                     isFound = true;
 
                     ID = (int)reader["CountryID"];
-
                 }
                 else
                 {
-                    // The record was not found
                     isFound = false;
                 }
 

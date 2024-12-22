@@ -51,7 +51,7 @@ namespace DVLD.People.Controls
             lblPhone.Text = _Person.Phone;
             lblEmail.Text = _Person.Email;
             lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString(); 
-            lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
+            //lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
             lblAddress.Text = _Person.Address;
             _LoadPersonImage();
         }

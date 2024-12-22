@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD.People
+namespace DVLD.Applications.Application_Types
 {
-    public partial class frmFindPerson : Form
+    public partial class frmListLocalDrivingLicesnseApplications : Form
     {
-        public frmFindPerson()
+        public frmListLocalDrivingLicesnseApplications()
         {
             InitializeComponent();
-        }
-
-        private void frmFindPerson_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

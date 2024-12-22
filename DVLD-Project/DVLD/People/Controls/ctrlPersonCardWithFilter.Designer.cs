@@ -47,7 +47,7 @@
             this.cbFilterBy.FormattingEnabled = true;
             this.cbFilterBy.Items.AddRange(new object[] {
             "Person ID",
-            "National No"});
+            "National No."});
             this.cbFilterBy.Location = new System.Drawing.Point(128, 50);
             this.cbFilterBy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFilterBy.Name = "cbFilterBy";
