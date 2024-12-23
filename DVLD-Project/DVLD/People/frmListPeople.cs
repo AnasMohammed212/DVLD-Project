@@ -108,7 +108,6 @@ namespace DVLD.People
 
             {
 
-                //Perform Delele and refresh
                 if (clsPerson.DeletePerson((int)dgvPeople.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Person Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
