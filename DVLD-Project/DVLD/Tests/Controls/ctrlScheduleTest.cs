@@ -25,7 +25,7 @@ namespace DVLD.Tests.Controls
         private int _LocalDrivingLicenseApplicationID = -1;
         private clsTestAppointment _TestAppointment;
         private int _TestAppointmentID = -1;
-        public clsTestType.enTestType TestType
+        public clsTestType.enTestType TestTypeID
         {
             get { return _TestTypeID; }
             set
