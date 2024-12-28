@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ctrlApplicationBasicInfo1 = new DVLD.Applications.Controls.ctrlApplicationBasicInfo();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -155,10 +156,22 @@
             this.ctrlApplicationBasicInfo1.Size = new System.Drawing.Size(877, 300);
             this.ctrlApplicationBasicInfo1.TabIndex = 22;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(362, 145);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(165, 25);
+            this.linkLabel1.TabIndex = 73;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "View License Info";
+            // 
             // ctrlDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.ctrlApplicationBasicInfo1);
             this.Controls.Add(this.lblPassedTests);
             this.Controls.Add(this.label7);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Controls.ctrlApplicationBasicInfo ctrlApplicationBasicInfo1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
