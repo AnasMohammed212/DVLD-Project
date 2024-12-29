@@ -151,4 +151,9 @@ namespace DVLD.Applications.Local_Driving_License
         {
             ctrlPersonCardWithFilter1.FilterFocus();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+           this.Close();
+        }
     } }

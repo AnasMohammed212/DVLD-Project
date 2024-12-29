@@ -30,22 +30,22 @@ namespace DVLD.Applications.Application_Types
             {
 
                 dgvListLocalDrivingLicenseApplication.Columns[0].HeaderText = "L.D.L.AppID";
-                dgvListLocalDrivingLicenseApplication.Columns[0].Width = 120;
+                dgvListLocalDrivingLicenseApplication.Columns[0].Width = 100;
 
                 dgvListLocalDrivingLicenseApplication.Columns[1].HeaderText = "Driving Class";
-                dgvListLocalDrivingLicenseApplication.Columns[1].Width = 300;
+                dgvListLocalDrivingLicenseApplication.Columns[1].Width = 200;
 
                 dgvListLocalDrivingLicenseApplication.Columns[2].HeaderText = "National No.";
-                dgvListLocalDrivingLicenseApplication.Columns[2].Width = 150;
+                dgvListLocalDrivingLicenseApplication.Columns[2].Width = 100;
 
                 dgvListLocalDrivingLicenseApplication.Columns[3].HeaderText = "Full Name";
-                dgvListLocalDrivingLicenseApplication.Columns[3].Width = 350;
+                dgvListLocalDrivingLicenseApplication.Columns[3].Width = 300;
 
                 dgvListLocalDrivingLicenseApplication.Columns[4].HeaderText = "Application Date";
                 dgvListLocalDrivingLicenseApplication.Columns[4].Width = 170;
 
                 dgvListLocalDrivingLicenseApplication.Columns[5].HeaderText = "Passed Tests";
-                    dgvListLocalDrivingLicenseApplication.Columns[5].Width = 150;
+                    dgvListLocalDrivingLicenseApplication.Columns[5].Width = 100;
             }
 
             cbFilterBy.SelectedIndex = 0;
@@ -157,6 +157,112 @@ namespace DVLD.Applications.Application_Types
                     MessageBox.Show("Could not delete applicatoin, other data depends on it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void scheduleTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+            clsTestAppointment Appointment =
+                clsTestAppointment.GetLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.VisionTest);
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Vision Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            //frmTakeTest frm = new frmTakeTest(Appointment.TestAppointmentID, clsTestType.enTestType.VisionTest);
+            //frm.ShowDialog();
+        }
+
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+
+            if (!clsLocalDrivingLicenseApplication.DoesPassTestType(LocalDrivingLicenseApplicationID, clsTestType.enTestType.VisionTest))
+            {
+                MessageBox.Show("Person Should Pass the Vision Test First!", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            clsTestAppointment Appointment =
+               clsTestAppointment.GetLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.WrittenTest);
+
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Written Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            //frmTakeTest frm = new frmTakeTest(Appointment.TestAppointmentID, clsTestType.enTestType.WrittenTest);
+            //frm.ShowDialog();
+        }
+
+        private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+            if (!clsLocalDrivingLicenseApplication.DoesPassTestType(LocalDrivingLicenseApplicationID, clsTestType.enTestType.WrittenTest))
+            {
+                MessageBox.Show("Person Should Pass the Written Test First!", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            clsTestAppointment Appointment =
+             clsTestAppointment.GetLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.StreetTest);
+
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Street Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //frmTakeTest frm = new frmTakeTest(Appointment.TestAppointmentID, clsTestType.enTestType.StreetTest);
+            //frm.ShowDialog();
+
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure do want to cancel this application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            int LocalDrivingLicenseApplicationID = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication =
+                clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+
+            if (LocalDrivingLicenseApplication != null)
+            {
+                if (LocalDrivingLicenseApplication.Cancel())
+                {
+                    MessageBox.Show("Application Cancelled Successfully.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmListLocalDrivingLicesnseApplications_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Could not cancel applicatoin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+            int TotalPassedTests = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[5].Value;
+            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3);
         }
     }
 }

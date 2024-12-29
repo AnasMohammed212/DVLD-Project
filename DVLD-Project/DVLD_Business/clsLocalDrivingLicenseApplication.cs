@@ -231,5 +231,6 @@ namespace DVLD_Business
 
             return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
         }
+        
     }
 }
