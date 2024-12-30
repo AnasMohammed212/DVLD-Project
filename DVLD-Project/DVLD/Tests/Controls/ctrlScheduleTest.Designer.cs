@@ -286,7 +286,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Image = global::DVLD.Properties.Resources.Applications_64;
+            this.pictureBox7.Image = global::DVLD.Properties.Resources.Number_32;
             this.pictureBox7.Location = new System.Drawing.Point(182, 71);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 31);
@@ -383,7 +383,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Applications_64;
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.Number_32;
             this.pictureBox4.Location = new System.Drawing.Point(210, 242);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 31);
