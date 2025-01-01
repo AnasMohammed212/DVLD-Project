@@ -50,7 +50,7 @@
             this.tcApplicationInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.ctrlPersonCardWithFilter1 = new DVLD.People.Controls.ctrlPersonCardWithFilter();
-            this.btnPersonInfoNext = new System.Windows.Forms.Button();
+            this.btnApplicationnfoNext = new System.Windows.Forms.Button();
             this.tpApplicationInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -283,7 +283,7 @@
             // tpPersonalInfo
             // 
             this.tpPersonalInfo.Controls.Add(this.ctrlPersonCardWithFilter1);
-            this.tpPersonalInfo.Controls.Add(this.btnPersonInfoNext);
+            this.tpPersonalInfo.Controls.Add(this.btnApplicationnfoNext);
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 25);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -303,15 +303,16 @@
             this.ctrlPersonCardWithFilter1.TabIndex = 3;
             this.ctrlPersonCardWithFilter1.OnPersonSelected += new System.Action<int>(this.ctrlPersonCardWithFilter1_OnPersonSelected);
             // 
-            // btnPersonInfoNext
+            // btnApplicationnfoNext
             // 
-            this.btnPersonInfoNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonInfoNext.Location = new System.Drawing.Point(1008, 475);
-            this.btnPersonInfoNext.Name = "btnPersonInfoNext";
-            this.btnPersonInfoNext.Size = new System.Drawing.Size(131, 44);
-            this.btnPersonInfoNext.TabIndex = 2;
-            this.btnPersonInfoNext.Text = "Next";
-            this.btnPersonInfoNext.UseVisualStyleBackColor = true;
+            this.btnApplicationnfoNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplicationnfoNext.Location = new System.Drawing.Point(1008, 475);
+            this.btnApplicationnfoNext.Name = "btnApplicationnfoNext";
+            this.btnApplicationnfoNext.Size = new System.Drawing.Size(131, 44);
+            this.btnApplicationnfoNext.TabIndex = 2;
+            this.btnApplicationnfoNext.Text = "Next";
+            this.btnApplicationnfoNext.UseVisualStyleBackColor = true;
+            this.btnApplicationnfoNext.Click += new System.EventHandler(this.btnApplicationnfoNext_Click);
             // 
             // frmAddUpdateLocalDrivingLicenseApplication
             // 
@@ -357,7 +358,7 @@
         private System.Windows.Forms.TabControl tcApplicationInfo;
         private System.Windows.Forms.TabPage tpPersonalInfo;
         private People.Controls.ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;
-        private System.Windows.Forms.Button btnPersonInfoNext;
+        private System.Windows.Forms.Button btnApplicationnfoNext;
         private System.Windows.Forms.Label lblCreatedByUser;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -156,4 +156,26 @@ namespace DVLD.Applications.Local_Driving_License
         {
            this.Close();
         }
+
+        private void btnApplicationnfoNext_Click(object sender, EventArgs e)
+        {
+            if (_Mode == enMode.Update)
+            {
+                btnSave.Enabled = true;
+                tpApplicationInfo.Enabled = true;
+                tcApplicationInfo.SelectedTab = tcApplicationInfo.TabPages["tpApplicationInfo"];
+                return;
+            }
+            if (ctrlPersonCardWithFilter1.PersonID != -1)
+            {
+                btnSave.Enabled = true;
+                tpApplicationInfo.Enabled = true;
+                tcApplicationInfo.SelectedTab = tcApplicationInfo.TabPages["tpApplicationInfo"];
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ctrlPersonCardWithFilter1.FilterFocus();
+            }
+        }
     } }
