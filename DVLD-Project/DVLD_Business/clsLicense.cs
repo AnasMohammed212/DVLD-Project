@@ -17,7 +17,7 @@ namespace DVLD_Business
 
         public clsDriver DriverInfo;
         public int LicenseID { set; get; }
-        public int ApplicationID { set; get; }
+        public int ApplicationID { set; get; } 
         public int DriverID { set; get; }
         public int LicenseClass { set; get; }
         public clsLicenseClass LicenseClassIfo;
