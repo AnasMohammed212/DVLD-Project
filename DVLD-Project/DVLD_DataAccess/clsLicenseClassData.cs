@@ -41,7 +41,6 @@ namespace DVLD_DataAccess
                 }
                 else
                 {
-                    // The record was not found
                     isFound = false;
                 }
 
