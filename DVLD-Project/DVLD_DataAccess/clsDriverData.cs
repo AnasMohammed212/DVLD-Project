@@ -179,7 +179,7 @@ namespace DVLD_DataAccess
         public static bool UpdateDriver(int DriverID, int PersonID, int CreatedByUserID)
         {
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);.
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = @"Update  Drivers  
                             set PersonID = @PersonID,
                                 CreatedByUserID = @CreatedByUserID
