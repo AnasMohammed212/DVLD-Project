@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Applications.Local_Driving_License;
+using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 
 namespace DVLD.Applications.Application_Types
@@ -263,6 +264,12 @@ namespace DVLD.Applications.Application_Types
             clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
             int TotalPassedTests = (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[5].Value;
             issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3);
+        }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIssueDriverLicenseFirstTime frm=new frmIssueDriverLicenseFirstTime((int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[5].Value);
+            frm.ShowDialog();
         }
     }
 }
