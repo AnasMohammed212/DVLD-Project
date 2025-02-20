@@ -61,26 +61,26 @@ namespace DVLD.Tests
             }
 
 
-            //clsTest LastTest = localDrivingLicenseApplication.GetLastTestPerTestType(_TestType);
+            clsTest LastTest = localDrivingLicenseApplication.GetLastTestPerTestType(_TestType);
 
-            //if (LastTest == null)
-            //{
-            //    frmScheduleTest frm1 = new frmScheduleTest(_LocalDrivingLicenseApplicationID, _TestType);
-            //    frm1.ShowDialog();
-            //    frmListTestAppointments_Load(null, null);
-            //    return;
-            //}
+            if (LastTest == null)
+            {
+                frmScheduleTest frm1 = new frmScheduleTest(_LocalDrivingLicenseApplicationID, _TestType);
+                frm1.ShowDialog();
+                frmListTestAppointments_Load(null, null);
+                return;
+            }
 
-            //if (LastTest.TestResult == true)
-            //{
-            //    MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            if (LastTest.TestResult == true)
+            {
+                MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            //frmScheduleTest frm2 = new frmScheduleTest
-            //    (LastTest.TestAppointmentInfo.LocalDrivingLicenseApplicationID, _TestType);
-            //frm2.ShowDialog();
-            //frmListTestAppointments_Load(null, null);
+            frmScheduleTest frm2 = new frmScheduleTest
+                (LastTest.TestAppointmentInfo.LocalDrivingLicenseApplicationID, _TestType);
+            frm2.ShowDialog();
+            frmListTestAppointments_Load(null, null);
 
         }
 
@@ -94,11 +94,11 @@ namespace DVLD.Tests
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+            int TestAppointmentID = (int)dgvListTestAppointments.CurrentRow.Cells[0].Value;
 
-            //frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
-            //frm.ShowDialog();
-            //frmListTestAppointments_Load(null, null);
+            frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
+            frm.ShowDialog();
+            frmListTestAppointments_Load(null, null);
         }
     }
 }

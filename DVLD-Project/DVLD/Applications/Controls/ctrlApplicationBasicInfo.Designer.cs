@@ -140,7 +140,7 @@
             // 
             this.lblApplicant.AutoSize = true;
             this.lblApplicant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicant.Location = new System.Drawing.Point(495, 148);
+            this.lblApplicant.Location = new System.Drawing.Point(189, 63);
             this.lblApplicant.Name = "lblApplicant";
             this.lblApplicant.Size = new System.Drawing.Size(67, 25);
             this.lblApplicant.TabIndex = 61;
@@ -150,7 +150,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(330, 148);
+            this.label17.Location = new System.Drawing.Point(24, 63);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(93, 25);
             this.label17.TabIndex = 60;
@@ -160,7 +160,7 @@
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.Location = new System.Drawing.Point(495, 98);
+            this.lblType.Location = new System.Drawing.Point(786, 189);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(67, 25);
             this.lblType.TabIndex = 58;
@@ -170,7 +170,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(366, 98);
+            this.label15.Location = new System.Drawing.Point(657, 189);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 25);
             this.label15.TabIndex = 57;
@@ -284,7 +284,7 @@
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Image = global::DVLD.Properties.Resources.Person_321;
-            this.pictureBox8.Location = new System.Drawing.Point(437, 142);
+            this.pictureBox8.Location = new System.Drawing.Point(131, 57);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 31);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,7 +295,7 @@
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Image = global::DVLD.Properties.Resources.ApplicationType1;
-            this.pictureBox7.Location = new System.Drawing.Point(437, 92);
+            this.pictureBox7.Location = new System.Drawing.Point(728, 183);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 31);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -366,7 +366,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
             this.Name = "ctrlApplicationBasicInfo";
-            this.Size = new System.Drawing.Size(877, 300);
+            this.Size = new System.Drawing.Size(877, 348);
             this.Load += new System.EventHandler(this.ctrlApplicationBasicInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();

@@ -83,10 +83,16 @@ namespace DVLD.People.Controls
         }
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar ==(char)13)
+            if(e.KeyChar == (char)13)
+            {
                 btnFind.PerformClick();
+            }
+                
             if(cbFilterBy.Text=="Person ID")
-                e.Handled = !char.IsDigit(e.KeyChar)&&!char.IsControl(e.KeyChar);
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+                
         }
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,13 +119,13 @@ namespace DVLD.People.Controls
 
         private void txtFilterValue_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFilterValue.Text.Trim())){
+            if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
+            {
                 e.Cancel = true;
                 errorProvider1.SetError(txtFilterValue, "This Field is required!!");
             }
             else
             {
-                //e.Cancel= false;
                 errorProvider1.SetError(txtFilterValue, null);
             }
             //if (!clsPerson.isPersonExist(txtFilterValue.Text.Trim()))
