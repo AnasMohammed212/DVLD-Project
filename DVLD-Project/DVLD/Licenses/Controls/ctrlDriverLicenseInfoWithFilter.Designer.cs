@@ -28,57 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.ctrlDriverLicenseInfo1 = new DVLD.Licenses.Controls.ctrlDriverLicenseInfo();
+            this.gbFilters = new System.Windows.Forms.GroupBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.txtLicenseID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ctrlDriverLicenseInfo1
+            // 
+            this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(17, 102);
+            this.ctrlDriverLicenseInfo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
+            this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(1063, 447);
+            this.ctrlDriverLicenseInfo1.TabIndex = 3;
+            // 
+            // gbFilters
+            // 
+            this.gbFilters.Controls.Add(this.btnFind);
+            this.gbFilters.Controls.Add(this.txtLicenseID);
+            this.gbFilters.Controls.Add(this.label1);
+            this.gbFilters.Location = new System.Drawing.Point(39, 14);
+            this.gbFilters.Name = "gbFilters";
+            this.gbFilters.Size = new System.Drawing.Size(503, 100);
+            this.gbFilters.TabIndex = 4;
+            this.gbFilters.TabStop = false;
+            // 
+            // btnFind
+            // 
+            this.btnFind.BackgroundImage = global::DVLD.Properties.Resources.License_View_32;
+            this.btnFind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFind.Location = new System.Drawing.Point(399, 29);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(48, 48);
+            this.btnFind.TabIndex = 5;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // txtLicenseID
+            // 
+            this.txtLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLicenseID.Location = new System.Drawing.Point(148, 39);
+            this.txtLicenseID.Name = "txtLicenseID";
+            this.txtLicenseID.Size = new System.Drawing.Size(234, 27);
+            this.txtLicenseID.TabIndex = 4;
+            this.txtLicenseID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenseID_KeyPress);
+            this.txtLicenseID.Validating += new System.ComponentModel.CancelEventHandler(this.txtLicenseID_Validating);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(6, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 29);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 3;
             this.label1.Text = "License ID";
             // 
-            // textBox1
+            // errorProvider1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(154, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 27);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::DVLD.Properties.Resources.License_View_32;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(405, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 48);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
+            this.errorProvider1.ContainerControl = this;
             // 
             // ctrlDriverLicenseInfoWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbFilters);
+            this.Controls.Add(this.ctrlDriverLicenseInfo1);
             this.Name = "ctrlDriverLicenseInfoWithFilter";
-            this.Size = new System.Drawing.Size(875, 565);
+            this.Size = new System.Drawing.Size(1101, 565);
+            this.gbFilters.ResumeLayout(false);
+            this.gbFilters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
+        private ctrlDriverLicenseInfo ctrlDriverLicenseInfo1;
+        private System.Windows.Forms.GroupBox gbFilters;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.TextBox txtLicenseID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
