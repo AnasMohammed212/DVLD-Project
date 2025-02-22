@@ -1,6 +1,6 @@
 ﻿namespace DVLD.Licenses.Controls
 {
-    partial class ctrlDriverLicenses
+    partial class ctrlDriverLicenseInfo
     {
         /// <summary> 
         /// Required designer variable.

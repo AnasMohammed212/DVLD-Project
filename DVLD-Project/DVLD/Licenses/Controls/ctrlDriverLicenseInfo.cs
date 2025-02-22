@@ -14,12 +14,12 @@ using DVLD_Business;
 
 namespace DVLD.Licenses.Controls
 {
-    public partial class ctrlDriverLicenses : UserControl
+    public partial class ctrlDriverLicenseInfo : UserControl
     {
 
         private int _LicenseID;
         private clsLicense _License;
-        public ctrlDriverLicenses()
+        public ctrlDriverLicenseInfo()
         {
             InitializeComponent();
         }
