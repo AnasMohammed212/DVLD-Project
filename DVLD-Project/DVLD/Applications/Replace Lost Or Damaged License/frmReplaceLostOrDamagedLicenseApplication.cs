@@ -30,6 +30,7 @@ namespace DVLD.Applications.Replace_Lost_Or_Damaged_License
         }
         private void frmReplaceLostOrDamagedLicenseApplication_Load(object sender, EventArgs e)
         {
+            btnIssueReplacement.Enabled = false;
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
             rbDamagedLicense.Checked = true;
@@ -79,6 +80,7 @@ namespace DVLD.Applications.Replace_Lost_Or_Damaged_License
         }
         private void btnIssueReplacement_Click(object sender, EventArgs e)
         {
+            
             if (MessageBox.Show("Are you sure you want to Issue a Replacement for the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;

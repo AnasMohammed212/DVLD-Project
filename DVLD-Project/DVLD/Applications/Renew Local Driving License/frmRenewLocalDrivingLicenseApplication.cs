@@ -28,6 +28,7 @@ namespace DVLD.Applications.Renew_Local_Driving_License
 
         private void RenewLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
+            btnRenewLicense.Enabled = false;
             ctrlDriverLicenseInfoWithFilter1.txtLicenseIDFocus();
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblIssueDate.Text = lblApplicationDate.Text;
