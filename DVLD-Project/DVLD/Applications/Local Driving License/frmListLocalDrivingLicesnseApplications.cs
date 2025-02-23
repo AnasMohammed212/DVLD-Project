@@ -283,7 +283,7 @@ namespace DVLD.Applications.Application_Types
             bool PassedVisionTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.VisionTest); ;
             bool PassedWrittenTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.WrittenTest);
             bool PassedStreetTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.StreetTest);
-
+            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3) && !LicenseExists;
             ScheduleTestsMenu.Enabled = (!PassedVisionTest || !PassedWrittenTest || !PassedStreetTest) && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
 
             if (ScheduleTestsMenu.Enabled)
@@ -296,7 +296,7 @@ namespace DVLD.Applications.Application_Types
 
         private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmIssueDriverLicenseFirstTime frm=new frmIssueDriverLicenseFirstTime((int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[5].Value);
+            frmIssueDriverLicenseFirstTime frm=new frmIssueDriverLicenseFirstTime((int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
         private void _ScheduleTest(clsTestType.enTestType TestType)
@@ -323,5 +323,21 @@ namespace DVLD.Applications.Application_Types
             _ScheduleTest(clsTestType.enTestType.StreetTest);
         }
 
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID= (int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+            int LicenseID=clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID).GetActiveLicenseID();
+            if (LicenseID != -1)
+            {
+                frmShowLicenseInfo frm = new frmShowLicenseInfo(LicenseID);
+                frm.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
