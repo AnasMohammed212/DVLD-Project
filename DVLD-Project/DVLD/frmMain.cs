@@ -11,6 +11,7 @@ using DVLD.Applications.Application_Types;
 using DVLD.Applications.Local_Driving_License;
 using DVLD.Applications.Renew_Local_Driving_License;
 using DVLD.Applications.Replace_Lost_Or_Damaged_License;
+using DVLD.Drivers;
 using DVLD.Global_Classes;
 using DVLD.Login;
 using DVLD.People;
@@ -120,6 +121,12 @@ namespace DVLD
         {
             frmReplaceLostOrDamagedLicenseApplication frm=new frmReplaceLostOrDamagedLicenseApplication();
             frm.ShowDialog();
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListDrivers frm=new frmListDrivers();
+            frm.Show();
         }
     }
 }

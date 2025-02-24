@@ -371,6 +371,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1125, 896);
             this.Controls.Add(this.btnIssueReplacement);
             this.Controls.Add(this.btnClose);
@@ -398,7 +399,11 @@
             this.Controls.Add(this.gbReplacementFor);
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter1);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReplaceLostOrDamagedLicenseApplication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReplaceLostOrDamagedLicenseApplication";
             this.Load += new System.EventHandler(this.frmReplaceLostOrDamagedLicenseApplication_Load);
             this.gbReplacementFor.ResumeLayout(false);

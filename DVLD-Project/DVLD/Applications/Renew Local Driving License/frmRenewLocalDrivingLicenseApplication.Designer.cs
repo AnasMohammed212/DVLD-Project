@@ -334,7 +334,7 @@
             // 
             this.llShowLicenseInfo.AutoSize = true;
             this.llShowLicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llShowLicenseInfo.Location = new System.Drawing.Point(239, 1024);
+            this.llShowLicenseInfo.Location = new System.Drawing.Point(273, 1024);
             this.llShowLicenseInfo.Name = "llShowLicenseInfo";
             this.llShowLicenseInfo.Size = new System.Drawing.Size(206, 22);
             this.llShowLicenseInfo.TabIndex = 137;
@@ -546,7 +546,9 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRenewLocalDrivingLicenseApplication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RenewLocalDrivingLicenseApplication";
             this.Load += new System.EventHandler(this.RenewLocalDrivingLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
