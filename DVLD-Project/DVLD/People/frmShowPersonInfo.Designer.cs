@@ -39,7 +39,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(409, 28);
+            this.label1.Location = new System.Drawing.Point(368, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 36);
@@ -52,8 +52,8 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Location = new System.Drawing.Point(903, 546);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(745, 567);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(147, 46);
             this.btnClose.TabIndex = 2;
@@ -63,22 +63,24 @@
             // 
             // ctrlPersonCard1
             // 
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(-2, 96);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(12, 106);
             this.ctrlPersonCard1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(1183, 445);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(880, 445);
             this.ctrlPersonCard1.TabIndex = 0;
             // 
             // frmShowPersonInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 650);
+            this.ClientSize = new System.Drawing.Size(904, 617);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlPersonCard1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmShowPersonInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmShowPersonInfo";
             this.Load += new System.EventHandler(this.frmShowPersonInfo_Load);
             this.ResumeLayout(false);

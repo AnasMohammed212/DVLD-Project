@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.People;
 using DVLD_Business;
 
 namespace DVLD.Drivers
@@ -117,6 +118,19 @@ namespace DVLD.Drivers
         {
             if (cbFilterBy.Text == "Driver ID" || cbFilterBy.Text == "Person ID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void showPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = (int)dgvDrivers.CurrentRow.Cells[1].Value;
+            frmShowPersonInfo frm = new frmShowPersonInfo(PersonID);
+            frm.ShowDialog();
+            frmListDrivers_Load(null, null);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet.");
         }
     }
 }

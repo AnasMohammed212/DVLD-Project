@@ -69,7 +69,7 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(1074, 325);
+            this.dgvUsers.Size = new System.Drawing.Size(1164, 325);
             this.dgvUsers.TabIndex = 1;
             // 
             // lblRecordsCount
@@ -85,7 +85,7 @@
             // btnAddNewUser
             // 
             this.btnAddNewUser.Image = global::DVLD.Properties.Resources.Add_New_User_72;
-            this.btnAddNewUser.Location = new System.Drawing.Point(948, 74);
+            this.btnAddNewUser.Location = new System.Drawing.Point(1088, 86);
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(88, 85);
             this.btnAddNewUser.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.sendEmailToolStripMenuItem,
             this.phonToolStripMenuItem});
             this.cmsUser.Name = "contextMenuStrip1";
-            this.cmsUser.Size = new System.Drawing.Size(215, 194);
+            this.cmsUser.Size = new System.Drawing.Size(182, 166);
             // 
             // showUserInfoToolStripMenuItem
             // 
@@ -133,7 +133,7 @@
             // 
             this.deleteUserToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete_32;
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(955, 508);
+            this.btnClose.Location = new System.Drawing.Point(1045, 512);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(131, 44);
             this.btnClose.TabIndex = 4;
@@ -221,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 557);
+            this.ClientSize = new System.Drawing.Size(1182, 557);
             this.ContextMenuStrip = this.cmsUser;
             this.Controls.Add(this.cbIsActive);
             this.Controls.Add(this.txtFilterValue);
@@ -232,8 +232,10 @@
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmListUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListUsers";
             this.Load += new System.EventHandler(this.frmListUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();

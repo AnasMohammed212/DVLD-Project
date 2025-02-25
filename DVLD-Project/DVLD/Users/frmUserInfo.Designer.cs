@@ -35,7 +35,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(972, 581);
+            this.btnClose.Location = new System.Drawing.Point(770, 577);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(131, 44);
             this.btnClose.TabIndex = 2;
@@ -47,16 +47,17 @@
             // 
             this.ctrlUserCard1.Location = new System.Drawing.Point(22, 12);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(948, 613);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(879, 613);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 633);
+            this.ClientSize = new System.Drawing.Size(961, 633);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUserInfo";
             this.Text = "frmUserInfo";
             this.Load += new System.EventHandler(this.frmUserInfo_Load);
