@@ -292,6 +292,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateUser";
             this.Text = "frmAddUpdateUser";
             this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);

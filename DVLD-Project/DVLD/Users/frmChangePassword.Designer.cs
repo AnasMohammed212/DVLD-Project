@@ -183,6 +183,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCurrentPassword);
             this.Controls.Add(this.ctrlUserCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmChangePassword";
             this.Text = "frmChangePassword";
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
