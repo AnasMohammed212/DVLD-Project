@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Applications.Local_Driving_License;
+using DVLD.Licenses;
 using DVLD.Licenses.Local_Licenses;
 using DVLD.Tests;
 using DVLD_Business;
@@ -338,6 +339,14 @@ namespace DVLD.Applications.Application_Types
                 MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void showPerToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            string NationalNum= (string)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[2].Value;
+            clsPerson Person=clsPerson.Find(NationalNum);
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(Person.PersonID);
+            frm.ShowDialog();
         }
     }
 }

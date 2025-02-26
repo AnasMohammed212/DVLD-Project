@@ -31,32 +31,32 @@
             this.components = new System.ComponentModel.Container();
             this.tbLocalLicenses = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tbInternationalLicenses = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblLocalLicensesRecords = new System.Windows.Forms.Label();
-            this.dgvLocalLicensesHistory = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dgvLocalLicensesHistory = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showLicenseInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbInternationalLicenses = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbLocalLicenses.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tbInternationalLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicensesHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.tbInternationalLicenses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbLocalLicenses
             // 
             this.tbLocalLicenses.Controls.Add(this.tabPage1);
             this.tbLocalLicenses.Controls.Add(this.tbInternationalLicenses);
-            this.tbLocalLicenses.Location = new System.Drawing.Point(3, 30);
+            this.tbLocalLicenses.Location = new System.Drawing.Point(10, 56);
             this.tbLocalLicenses.Name = "tbLocalLicenses";
             this.tbLocalLicenses.SelectedIndex = 0;
-            this.tbLocalLicenses.Size = new System.Drawing.Size(941, 236);
+            this.tbLocalLicenses.Size = new System.Drawing.Size(1151, 285);
             this.tbLocalLicenses.TabIndex = 0;
             // 
             // tabPage1
@@ -67,42 +67,29 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(933, 207);
+            this.tabPage1.Size = new System.Drawing.Size(1143, 256);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Local";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tbInternationalLicenses
-            // 
-            this.tbInternationalLicenses.Controls.Add(this.label4);
-            this.tbInternationalLicenses.Controls.Add(this.label3);
-            this.tbInternationalLicenses.Controls.Add(this.dataGridView1);
-            this.tbInternationalLicenses.Location = new System.Drawing.Point(4, 25);
-            this.tbInternationalLicenses.Name = "tbInternationalLicenses";
-            this.tbInternationalLicenses.Padding = new System.Windows.Forms.Padding(3);
-            this.tbInternationalLicenses.Size = new System.Drawing.Size(933, 207);
-            this.tbInternationalLicenses.TabIndex = 1;
-            this.tbInternationalLicenses.Text = "International";
-            this.tbInternationalLicenses.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Driver Licenses";
             // 
             // lblLocalLicensesRecords
             // 
             this.lblLocalLicensesRecords.AutoSize = true;
             this.lblLocalLicensesRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalLicensesRecords.Location = new System.Drawing.Point(12, 182);
+            this.lblLocalLicensesRecords.Location = new System.Drawing.Point(12, 217);
             this.lblLocalLicensesRecords.Name = "lblLocalLicensesRecords";
             this.lblLocalLicensesRecords.Size = new System.Drawing.Size(67, 25);
             this.lblLocalLicensesRecords.TabIndex = 15;
             this.lblLocalLicensesRecords.Text = "?????";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Local Driver Licenses";
             // 
             // dgvLocalLicensesHistory
             // 
@@ -114,18 +101,47 @@
             this.dgvLocalLicensesHistory.Name = "dgvLocalLicensesHistory";
             this.dgvLocalLicensesHistory.RowHeadersWidth = 51;
             this.dgvLocalLicensesHistory.RowTemplate.Height = 24;
-            this.dgvLocalLicensesHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(865, 137);
+            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(1120, 156);
             this.dgvLocalLicensesHistory.TabIndex = 14;
             // 
-            // label2
+            // contextMenuStrip1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Local Driver Licenses";
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showLicenseInfoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(201, 30);
+            // 
+            // showLicenseInfoToolStripMenuItem
+            // 
+            this.showLicenseInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.License_View_32;
+            this.showLicenseInfoToolStripMenuItem.Name = "showLicenseInfoToolStripMenuItem";
+            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.showLicenseInfoToolStripMenuItem.Text = "Show License Info";
+            this.showLicenseInfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInfoToolStripMenuItem_Click);
+            // 
+            // tbInternationalLicenses
+            // 
+            this.tbInternationalLicenses.Controls.Add(this.label4);
+            this.tbInternationalLicenses.Controls.Add(this.label3);
+            this.tbInternationalLicenses.Controls.Add(this.dataGridView1);
+            this.tbInternationalLicenses.Location = new System.Drawing.Point(4, 25);
+            this.tbInternationalLicenses.Name = "tbInternationalLicenses";
+            this.tbInternationalLicenses.Padding = new System.Windows.Forms.Padding(3);
+            this.tbInternationalLicenses.Size = new System.Drawing.Size(1077, 207);
+            this.tbInternationalLicenses.TabIndex = 1;
+            this.tbInternationalLicenses.Text = "International";
+            this.tbInternationalLicenses.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 25);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "?????";
             // 
             // label3
             // 
@@ -149,49 +165,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(865, 137);
             this.dataGridView1.TabIndex = 16;
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 25);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "?????";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showLicenseInfoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 58);
-            // 
-            // showLicenseInfoToolStripMenuItem
-            // 
-            this.showLicenseInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.License_View_32;
-            this.showLicenseInfoToolStripMenuItem.Name = "showLicenseInfoToolStripMenuItem";
-            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.showLicenseInfoToolStripMenuItem.Text = "Show License Info";
-            this.showLicenseInfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInfoToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Driver Licenses";
             // 
             // ctrlDriverLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbLocalLicenses);
             this.Name = "ctrlDriverLicenses";
-            this.Size = new System.Drawing.Size(956, 267);
+            this.Size = new System.Drawing.Size(1179, 345);
             this.Load += new System.EventHandler(this.ctrlDriverLicenses_Load);
             this.tbLocalLicenses.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicensesHistory)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tbInternationalLicenses.ResumeLayout(false);
             this.tbInternationalLicenses.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicensesHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

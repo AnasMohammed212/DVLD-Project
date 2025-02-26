@@ -184,6 +184,7 @@
             this.showPerToolStripMenuItem.Name = "showPerToolStripMenuItem";
             this.showPerToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.showPerToolStripMenuItem.Text = "Show Person License History";
+            this.showPerToolStripMenuItem.Click += new System.EventHandler(this.showPerToolStripMenuItem_Click);
             // 
             // lblRecordsCount
             // 
