@@ -12,12 +12,9 @@ namespace DVLD_Business
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-
-
         public int DetainID { set; get; }
         public int LicenseID { set; get; }
         public DateTime DetainDate { set; get; }
-
         public float FineFees { set; get; }
         public int CreatedByUserID { set; get; }
         public clsUser CreatedByUserInfo { set; get; }
@@ -39,11 +36,7 @@ namespace DVLD_Business
             this.ReleaseDate = DateTime.MaxValue;
             this.ReleasedByUserID = 0;
             this.ReleaseApplicationID = -1;
-
-
-
             Mode = enMode.AddNew;
-
         }
 
         public clsDetainedLicense(int DetainID,

@@ -13,6 +13,7 @@ using DVLD.Applications.Renew_Local_Driving_License;
 using DVLD.Applications.Replace_Lost_Or_Damaged_License;
 using DVLD.Drivers;
 using DVLD.Global_Classes;
+using DVLD.Licenses.Detain_License;
 using DVLD.Login;
 using DVLD.People;
 using DVLD.Tests.Tests_Types;
@@ -127,6 +128,12 @@ namespace DVLD
         {
             frmListDrivers frm=new frmListDrivers();
             frm.Show();
+        }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainLicenseApplication frm=new frmDetainLicenseApplication();
+            frm.ShowDialog();
         }
     }
 }

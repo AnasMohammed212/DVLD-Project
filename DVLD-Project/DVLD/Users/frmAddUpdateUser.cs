@@ -120,7 +120,6 @@ namespace DVLD.Users
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //_User.PersonID=ctrlPersonCardWithFilter1.PersonID;
             _User.PersonID = ctrlPersonCardWithFilter1.PersonID;
             _User.UserName=txtUserName.Text.Trim();
             _User.Password=txtPassword.Text.Trim();
@@ -138,5 +137,6 @@ namespace DVLD.Users
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
     }
 }
