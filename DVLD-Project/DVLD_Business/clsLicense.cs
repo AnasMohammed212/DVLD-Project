@@ -79,7 +79,7 @@ namespace DVLD_Business
 
             this.DriverInfo = clsDriver.FindByDriverID(this.DriverID);
             this.LicenseClassIfo = clsLicenseClass.Find(this.LicenseClass);
-            //this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
+            this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
 
             Mode = enMode.Update;
         }

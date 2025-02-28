@@ -174,9 +174,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(21, 142);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 25);
+            this.label13.Size = new System.Drawing.Size(99, 25);
             this.label13.TabIndex = 72;
-            this.label13.Text = "Detain Fees";
+            this.label13.Text = "Fine Fees";
             // 
             // pictureBox6
             // 

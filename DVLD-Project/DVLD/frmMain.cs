@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Applications.Application_Types;
 using DVLD.Applications.Local_Driving_License;
+using DVLD.Applications.Release_Detained_License;
 using DVLD.Applications.Renew_Local_Driving_License;
 using DVLD.Applications.Replace_Lost_Or_Damaged_License;
 using DVLD.Drivers;
@@ -134,6 +135,12 @@ namespace DVLD
         {
             frmDetainLicenseApplication frm=new frmDetainLicenseApplication();
             frm.ShowDialog();
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedLicenseApplication frm=new frmReleaseDetainedLicenseApplication();
+            frm.Show();
         }
     }
 }

@@ -93,6 +93,11 @@ namespace DVLD.Licenses.Controls
                 btnFind.PerformClick();
             }
         }
+
+        private void ctrlDriverLicenseInfoWithFilter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
