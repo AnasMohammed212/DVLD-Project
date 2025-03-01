@@ -77,9 +77,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
             this.lblTitle.Location = new System.Drawing.Point(448, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(247, 38);
+            this.lblTitle.Size = new System.Drawing.Size(274, 38);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Detain License";
+            this.lblTitle.Text = "Release License";
             // 
             // btnRelease
             // 

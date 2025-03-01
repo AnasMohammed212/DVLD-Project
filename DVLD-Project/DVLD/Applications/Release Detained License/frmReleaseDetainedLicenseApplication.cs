@@ -58,7 +58,7 @@ namespace DVLD.Applications.Release_Detained_License
 
         private void frmReleaseDetainedLicenseApplication_Load(object sender, EventArgs e)
         {
-            btnRelease.Enabled = false;
+            //btnRelease.Enabled = false;
         }
 
         private void btnRelease_Click(object sender, EventArgs e)
