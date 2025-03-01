@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvListLocalDrivingLicenseApplication = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showApplicationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,20 +49,11 @@
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.btnAddApplication = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLocalDrivingLicenseApplication)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(537, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(434, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Local Driving License Application";
             // 
             // dgvListLocalDrivingLicenseApplication
             // 
@@ -91,7 +81,7 @@
             this.showLicenseToolStripMenuItem,
             this.showPerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(297, 240);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(297, 212);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
@@ -264,11 +254,23 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(472, 257);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(720, 39);
+            this.lblTitle.TabIndex = 136;
+            this.lblTitle.Text = "Local Driving License Application";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmListLocalDrivingLicesnseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1525, 692);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnAddApplication);
             this.Controls.Add(this.txtFilterValue);
             this.Controls.Add(this.label2);
@@ -276,7 +278,6 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.dgvListLocalDrivingLicenseApplication);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmListLocalDrivingLicesnseApplications";
@@ -293,7 +294,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListLocalDrivingLicenseApplication;
         private System.Windows.Forms.Label lblRecordsCount;
         private System.Windows.Forms.Button btnClose;
@@ -313,5 +313,6 @@
         private System.Windows.Forms.ToolStripMenuItem scheduleVisionTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scheduleWrittenTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

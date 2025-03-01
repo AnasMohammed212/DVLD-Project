@@ -58,6 +58,18 @@
     <Compile Include="Applications\Application Types\frmListApplicationTypes.Designer.cs">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\International Licenses\frmListInternationalLicesnseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\International Licenses\frmListInternationalLicesnseApplications.Designer.cs">
+      <DependentUpon>frmListInternationalLicesnseApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\International Licenses\frmNewInternationalLicensesApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\International Licenses\frmNewInternationalLicensesApplication.Designer.cs">
+      <DependentUpon>frmNewInternationalLicensesApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Local Driving License\frmListLocalDrivingLicesnseApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,18 @@
     </Compile>
     <Compile Include="Licenses\frmShowPersonLicenseHistory.Designer.cs">
       <DependentUpon>frmShowPersonLicenseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\Controls\ctrlDriverInternationalLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\Controls\ctrlDriverInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\Local Licenses\Controls\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +316,12 @@
     <EmbeddedResource Include="Applications\Application Types\frmListApplicationTypes.resx">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\International Licenses\frmListInternationalLicesnseApplications.resx">
+      <DependentUpon>frmListInternationalLicesnseApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\International Licenses\frmNewInternationalLicensesApplication.resx">
+      <DependentUpon>frmNewInternationalLicensesApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\frmListLocalDrivingLicesnseApplications.resx">
       <DependentUpon>frmListLocalDrivingLicesnseApplications.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +363,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\frmShowPersonLicenseHistory.resx">
       <DependentUpon>frmShowPersonLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\International Licenses\Controls\ctrlDriverInternationalLicenseInfo.resx">
+      <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.resx">
+      <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local Licenses\Controls\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
@@ -716,6 +752,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Release Detained License 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

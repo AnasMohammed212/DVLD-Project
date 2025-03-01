@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Applications.Application_Types;
+using DVLD.Applications.International_License;
+using DVLD.Applications.International_Licenses;
 using DVLD.Applications.Local_Driving_License;
 using DVLD.Applications.Release_Detained_License;
 using DVLD.Applications.Renew_Local_Driving_License;
@@ -146,6 +148,18 @@ namespace DVLD
         private void manageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListDetainedLicenses frm =new frmListDetainedLicenses();
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewInternationalLicensesApplication frm=new frmNewInternationalLicensesApplication();
+            frm.ShowDialog();
+        }
+
+        private void internationalDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListInternationalLicesnseApplications frm=new frmListInternationalLicesnseApplications();
             frm.ShowDialog();
         }
     }
