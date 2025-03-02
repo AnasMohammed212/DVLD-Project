@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 
 namespace DVLD.Applications.Local_Driving_License
@@ -78,6 +79,12 @@ namespace DVLD.Applications.Local_Driving_License
         private void ctrlApplicationBasicInfo1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void llShowLicenceInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmShowLicenseInfo frm = new frmShowLicenseInfo(_LicenseID);
+            frm.ShowDialog();
         }
     }
 }
