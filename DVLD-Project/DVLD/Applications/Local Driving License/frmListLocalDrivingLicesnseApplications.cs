@@ -27,11 +27,9 @@ namespace DVLD.Applications.Application_Types
         {
             _dtAllLocalDrivingLicenseApplications = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications();
             dgvListLocalDrivingLicenseApplication.DataSource = _dtAllLocalDrivingLicenseApplications;
-
             lblRecordsCount.Text = dgvListLocalDrivingLicenseApplication.Rows.Count.ToString();
             if (dgvListLocalDrivingLicenseApplication.Rows.Count > 0)
             {
-
                 dgvListLocalDrivingLicenseApplication.Columns[0].HeaderText = "L.D.L.AppID";
                 dgvListLocalDrivingLicenseApplication.Columns[0].Width = 100;
 
@@ -130,7 +128,10 @@ namespace DVLD.Applications.Application_Types
 
         private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not Implemented Yet!", "Sorry");
+
+            frmLocalDrivingLicenseApplicationInfo frm =new frmLocalDrivingLicenseApplicationInfo((int)dgvListLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListLocalDrivingLicesnseApplications_Load(null, null);
         }
 
         private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)

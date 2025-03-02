@@ -36,7 +36,7 @@
             // 
             this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(3, 12);
             this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
-            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(908, 488);
+            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(887, 478);
             this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 0;
             // 
             // btnClose
@@ -54,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 547);
+            this.ClientSize = new System.Drawing.Size(902, 547);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Name = "frmLocalDrivingLicenseApplicationInfo";

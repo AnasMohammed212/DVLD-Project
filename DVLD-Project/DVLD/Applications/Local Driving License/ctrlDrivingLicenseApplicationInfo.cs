@@ -34,12 +34,9 @@ namespace DVLD.Applications.Local_Driving_License
             if (_LocalDrivingLicenseApplication == null)
             {
                 _ResetLocalDrivingLicenseApplicationInfo();
-
-
                 MessageBox.Show("No Application with ApplicationID = " + LocalDrivingLicenseApplicationID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             _FillLocalDrivingLicenseApplicationInfo();
         }
 
@@ -49,25 +46,20 @@ namespace DVLD.Applications.Local_Driving_License
             if (_LocalDrivingLicenseApplication == null)
             {
                 _ResetLocalDrivingLicenseApplicationInfo();
-
-
                 MessageBox.Show("No Application with ApplicationID = " + LocalDrivingLicenseApplicationID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             _FillLocalDrivingLicenseApplicationInfo();
         }
 
         private void _FillLocalDrivingLicenseApplicationInfo()
         {
-            //_LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
-
-            //llShowLicenceInfo.Enabled = (_LicenseID != -1);
+            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+            llShowLicenceInfo.Enabled = (_LicenseID != -1);
             lblLocalDrivingLicenseApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblAppliedFor.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
-            //lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
+            lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
             ctrlApplicationBasicInfo1.LoadApplicationInfo(_LocalDrivingLicenseApplication.ApplicationID);
-
         }
 
         private void _ResetLocalDrivingLicenseApplicationInfo()
@@ -76,11 +68,14 @@ namespace DVLD.Applications.Local_Driving_License
             ctrlApplicationBasicInfo1.ResetApplicationInfo();
             lblLocalDrivingLicenseApplicationID.Text = "[????]";
             lblAppliedFor.Text = "[????]";
-
-
         }
 
         private void ctrlDrivingLicenseApplicationInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctrlApplicationBasicInfo1_Load(object sender, EventArgs e)
         {
 
         }

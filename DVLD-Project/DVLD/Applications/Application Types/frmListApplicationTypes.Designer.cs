@@ -47,6 +47,7 @@
             this.dgvListApplicationTypes.ContextMenuStrip = this.cmsApplicationTypes;
             this.dgvListApplicationTypes.Location = new System.Drawing.Point(43, 304);
             this.dgvListApplicationTypes.Name = "dgvListApplicationTypes";
+            this.dgvListApplicationTypes.ReadOnly = true;
             this.dgvListApplicationTypes.RowHeadersWidth = 51;
             this.dgvListApplicationTypes.RowTemplate.Height = 24;
             this.dgvListApplicationTypes.Size = new System.Drawing.Size(821, 287);

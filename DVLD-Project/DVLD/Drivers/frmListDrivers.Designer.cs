@@ -97,6 +97,7 @@
             this.dgvDrivers.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvDrivers.Location = new System.Drawing.Point(17, 187);
             this.dgvDrivers.Name = "dgvDrivers";
+            this.dgvDrivers.ReadOnly = true;
             this.dgvDrivers.RowHeadersWidth = 51;
             this.dgvDrivers.RowTemplate.Height = 24;
             this.dgvDrivers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;

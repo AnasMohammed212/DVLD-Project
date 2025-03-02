@@ -58,6 +58,7 @@
             this.dgvDetainedLicenses.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvDetainedLicenses.Location = new System.Drawing.Point(2, 337);
             this.dgvDetainedLicenses.Name = "dgvDetainedLicenses";
+            this.dgvDetainedLicenses.ReadOnly = true;
             this.dgvDetainedLicenses.RowHeadersWidth = 51;
             this.dgvDetainedLicenses.RowTemplate.Height = 24;
             this.dgvDetainedLicenses.Size = new System.Drawing.Size(1222, 228);

@@ -45,11 +45,11 @@
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.btnAddApplication = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLocalDrivingLicenseApplication)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,10 +58,13 @@
             // dgvListLocalDrivingLicenseApplication
             // 
             this.dgvListLocalDrivingLicenseApplication.AllowUserToAddRows = false;
+            this.dgvListLocalDrivingLicenseApplication.BackgroundColor = System.Drawing.Color.White;
             this.dgvListLocalDrivingLicenseApplication.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListLocalDrivingLicenseApplication.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvListLocalDrivingLicenseApplication.GridColor = System.Drawing.SystemColors.Control;
             this.dgvListLocalDrivingLicenseApplication.Location = new System.Drawing.Point(12, 343);
             this.dgvListLocalDrivingLicenseApplication.Name = "dgvListLocalDrivingLicenseApplication";
+            this.dgvListLocalDrivingLicenseApplication.ReadOnly = true;
             this.dgvListLocalDrivingLicenseApplication.RowHeadersWidth = 51;
             this.dgvListLocalDrivingLicenseApplication.RowTemplate.Height = 24;
             this.dgvListLocalDrivingLicenseApplication.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -199,6 +202,7 @@
             // 
             // cbFilterBy
             // 
+            this.cbFilterBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterBy.FormattingEnabled = true;
             this.cbFilterBy.Items.AddRange(new object[] {
             "None",
@@ -206,28 +210,18 @@
             "National No.",
             "Full Name",
             "Status"});
-            this.cbFilterBy.Location = new System.Drawing.Point(106, 315);
+            this.cbFilterBy.Location = new System.Drawing.Point(106, 307);
             this.cbFilterBy.Name = "cbFilterBy";
-            this.cbFilterBy.Size = new System.Drawing.Size(185, 24);
+            this.cbFilterBy.Size = new System.Drawing.Size(210, 33);
             this.cbFilterBy.TabIndex = 7;
             this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 315);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Filter By:";
-            // 
             // txtFilterValue
             // 
-            this.txtFilterValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterValue.Location = new System.Drawing.Point(306, 316);
+            this.txtFilterValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilterValue.Location = new System.Drawing.Point(335, 310);
             this.txtFilterValue.Name = "txtFilterValue";
-            this.txtFilterValue.Size = new System.Drawing.Size(190, 24);
+            this.txtFilterValue.Size = new System.Drawing.Size(190, 30);
             this.txtFilterValue.TabIndex = 9;
             this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
             this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
@@ -265,21 +259,31 @@
             this.lblTitle.Text = "Local Driving License Application";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 312);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.TabIndex = 161;
+            this.label1.Text = "Filter By:";
+            // 
             // frmListLocalDrivingLicesnseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1525, 692);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnAddApplication);
             this.Controls.Add(this.txtFilterValue);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.dgvListLocalDrivingLicenseApplication);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListLocalDrivingLicesnseApplications";
             this.Text = "frmListLocalDrivingLicesnseApplications";
             this.Load += new System.EventHandler(this.frmListLocalDrivingLicesnseApplications_Load);
@@ -298,7 +302,6 @@
         private System.Windows.Forms.Label lblRecordsCount;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbFilterBy;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFilterValue;
         private System.Windows.Forms.Button btnAddApplication;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -314,5 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem scheduleWrittenTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label label1;
     }
 }

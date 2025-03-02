@@ -55,6 +55,7 @@
             this.dgvPeople.Location = new System.Drawing.Point(12, 140);
             this.dgvPeople.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPeople.Name = "dgvPeople";
+            this.dgvPeople.ReadOnly = true;
             this.dgvPeople.RowHeadersWidth = 51;
             this.dgvPeople.RowTemplate.Height = 24;
             this.dgvPeople.Size = new System.Drawing.Size(1308, 414);

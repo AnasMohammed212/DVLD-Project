@@ -48,7 +48,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1065, 871);
+            this.btnClose.Location = new System.Drawing.Point(1059, 791);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(131, 44);
             this.btnClose.TabIndex = 16;
@@ -63,13 +63,14 @@
             this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(985, 524);
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(985, 419);
             this.ctrlPersonCardWithFilter1.TabIndex = 17;
             this.ctrlPersonCardWithFilter1.OnPersonSelected += new System.Action<int>(this.ctrlPersonCardWithFilter1_OnPersonSelected);
             // 
             // ctrlDriverLicenses1
             // 
-            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(18, 571);
+            this.ctrlDriverLicenses1.AutoScroll = true;
+            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(12, 490);
             this.ctrlDriverLicenses1.Name = "ctrlDriverLicenses1";
             this.ctrlDriverLicenses1.Size = new System.Drawing.Size(1178, 295);
             this.ctrlDriverLicenses1.TabIndex = 4;
@@ -78,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 927);
+            this.ClientSize = new System.Drawing.Size(1221, 844);
             this.Controls.Add(this.ctrlPersonCardWithFilter1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlDriverLicenses1);

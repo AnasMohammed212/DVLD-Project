@@ -60,6 +60,7 @@
             this.dgvListTestAppointments.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvListTestAppointments.Location = new System.Drawing.Point(26, 552);
             this.dgvListTestAppointments.Name = "dgvListTestAppointments";
+            this.dgvListTestAppointments.ReadOnly = true;
             this.dgvListTestAppointments.RowHeadersWidth = 51;
             this.dgvListTestAppointments.RowTemplate.Height = 24;
             this.dgvListTestAppointments.Size = new System.Drawing.Size(872, 141);
