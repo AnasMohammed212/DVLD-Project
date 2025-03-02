@@ -153,5 +153,9 @@ namespace DVLD.People.Controls
             txtFilterValue.Focus();
         }
 
+        private void ctrlPersonCard1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

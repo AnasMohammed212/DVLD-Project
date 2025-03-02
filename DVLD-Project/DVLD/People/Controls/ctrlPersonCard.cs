@@ -29,16 +29,16 @@ namespace DVLD.People.Controls
         {
             _PersonID = -1;
             lblPersonID.Text = "[????]";
-            lblNationalNo.Text = "[????]";
+            lblAddress.Text = "[????]";
             lblName.Text = "[????]";
             pbPersonImage.Image = Resources.Male_512;
             lblGender.Text = "[????]";
             lblEmail.Text = "[????]";
             lblPhone.Text = "[????]";
+            lblNationalNo.Text = "[????]";
             lblDateOfBirth.Text = "[????]";
             lblCountry.Text = "[????]";
-            lblAddress.Text = "[????]";
-            pbPersonImage.Image = Resources.Male_512;
+            
         }
         private void _FillPersonInfo()
         {
@@ -47,10 +47,10 @@ namespace DVLD.People.Controls
             lblPersonID.Text = _Person.PersonID.ToString();
             lblName.Text = _Person.FullName;
             lblNationalNo.Text = _Person.NationalNo;
-            lblGender.Text = _Person.Gender==0?"Male": "Female";
+            lblGender.Text = _Person.Gender == 0 ? "Male" : "Female";
             lblPhone.Text = _Person.Phone;
             lblEmail.Text = _Person.Email;
-            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString(); 
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
             lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
             lblAddress.Text = _Person.Address;
             _LoadPersonImage();
@@ -61,11 +61,11 @@ namespace DVLD.People.Controls
                 pbPersonImage.Image = Resources.Male_512;
             else
                 pbPersonImage.Image = Resources.Female_512;
-            string ImagePath=_Person.ImagePath;
-            if(ImagePath != null)
+            string ImagePath = _Person.ImagePath;
+            if (ImagePath != null)
             {
-                if(File.Exists(ImagePath))
-                    pbPersonImage.ImageLocation= ImagePath;
+                if (File.Exists(ImagePath))
+                    pbPersonImage.ImageLocation = ImagePath;
                 else
                     MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -101,7 +101,7 @@ namespace DVLD.People.Controls
 
         private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAddUpdatePerson frm=new frmAddUpdatePerson(_PersonID);
+            frmAddUpdatePerson frm = new frmAddUpdatePerson(_PersonID);
             frm.ShowDialog();
             LoadPersonInfo(PersonID);
         }
@@ -112,6 +112,11 @@ namespace DVLD.People.Controls
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
