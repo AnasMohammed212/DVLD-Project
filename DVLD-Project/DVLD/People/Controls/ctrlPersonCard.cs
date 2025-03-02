@@ -71,7 +71,6 @@ namespace DVLD.People.Controls
 
             }
 
-
         }
         public void LoadPersonInfo(int PersonID)
         {
@@ -119,6 +118,12 @@ namespace DVLD.People.Controls
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void llEditPersonInfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddUpdatePerson frm =new frmAddUpdatePerson(_PersonID);
+            frm.ShowDialog();
         }
     }
 }
