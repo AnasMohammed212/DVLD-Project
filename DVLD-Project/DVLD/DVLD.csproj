@@ -758,9 +758,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Address 32.png" />
+    <None Include="Resources\Driver License.png" />
     <None Include="Resources\Country 321.png" />
     <None Include="Resources\Phone 32.png" />
     <None Include="Resources\Address 321.png" />
+    <None Include="Resources\Certificate.png" />
     <Content Include="Resources\Country 32.png" />
     <None Include="Resources\Email 32.png" />
   </ItemGroup>

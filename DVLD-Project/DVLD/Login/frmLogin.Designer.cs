@@ -32,14 +32,14 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.chkRememberMe = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.chkRememberMe = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,7 +48,7 @@
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(596, 224);
+            this.txtUserName.Location = new System.Drawing.Point(393, 203);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(217, 27);
             this.txtUserName.TabIndex = 1;
@@ -56,7 +56,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(596, 280);
+            this.txtPassword.Location = new System.Drawing.Point(393, 259);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(217, 27);
             this.txtPassword.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(439, 220);
+            this.label1.Location = new System.Drawing.Point(236, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 28);
             this.label1.TabIndex = 5;
@@ -75,19 +75,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(439, 276);
+            this.label2.Location = new System.Drawing.Point(236, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
+            // chkRememberMe
+            // 
+            this.chkRememberMe.AutoSize = true;
+            this.chkRememberMe.Location = new System.Drawing.Point(393, 303);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.Size = new System.Drawing.Size(117, 21);
+            this.chkRememberMe.TabIndex = 10;
+            this.chkRememberMe.Text = "Remember Me";
+            this.chkRememberMe.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(349, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 28);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Login To Your Account";
+            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.IconLogo;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.Driver_License;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(371, 266);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.Size = new System.Drawing.Size(104, 89);
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
@@ -96,7 +115,7 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Image = global::DVLD.Properties.Resources.Login1;
-            this.btnLogin.Location = new System.Drawing.Point(756, 324);
+            this.btnLogin.Location = new System.Drawing.Point(553, 303);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(57, 60);
             this.btnLogin.TabIndex = 8;
@@ -108,7 +127,7 @@
             this.btnMin.FlatAppearance.BorderSize = 0;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Image = global::DVLD.Properties.Resources.Subtract;
-            this.btnMin.Location = new System.Drawing.Point(803, 12);
+            this.btnMin.Location = new System.Drawing.Point(616, 12);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(41, 44);
             this.btnMin.TabIndex = 7;
@@ -118,7 +137,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD.Properties.Resources.Person_32;
-            this.pictureBox2.Location = new System.Drawing.Point(557, 216);
+            this.pictureBox2.Location = new System.Drawing.Point(354, 195);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 35);
             this.pictureBox2.TabIndex = 4;
@@ -127,7 +146,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Password_32;
-            this.pictureBox1.Location = new System.Drawing.Point(557, 280);
+            this.pictureBox1.Location = new System.Drawing.Point(354, 259);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 30);
             this.pictureBox1.TabIndex = 3;
@@ -138,38 +157,18 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::DVLD.Properties.Resources.Close2;
-            this.btnClose.Location = new System.Drawing.Point(865, 12);
+            this.btnClose.Location = new System.Drawing.Point(678, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(41, 44);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.button1_Click);
             // 
-            // chkRememberMe
-            // 
-            this.chkRememberMe.AutoSize = true;
-            this.chkRememberMe.Location = new System.Drawing.Point(596, 324);
-            this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(117, 21);
-            this.chkRememberMe.TabIndex = 10;
-            this.chkRememberMe.Text = "Remember Me";
-            this.chkRememberMe.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(552, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 28);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Login To Your Account";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 467);
+            this.ClientSize = new System.Drawing.Size(741, 396);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chkRememberMe);
             this.Controls.Add(this.pictureBox3);
