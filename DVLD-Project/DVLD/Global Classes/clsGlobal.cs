@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_Business;
+using Microsoft.Win32;
 
 namespace DVLD.Global_Classes
 {
@@ -73,6 +74,41 @@ namespace DVLD.Global_Classes
             }
 
 
+        }
+
+        public static bool GetStoredCredentialFromRegistry(ref string Username, ref string Password)
+        {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+            string UsernameKey = "Username";
+            string PasswordKey = "Password";
+            try
+            {
+                Username = Registry.GetValue(keyPath, UsernameKey, null) as string;
+                Password = Registry.GetValue(keyPath, PasswordKey, null) as string;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public static bool RememberUsernameAndPasswordUsingRegistry(string Username, string Password)
+        {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+            string UsernameKey = "Username";
+            string PasswordKey = "Password";
+            try
+            {
+                Registry.SetValue(keyPath, UsernameKey, Username, RegistryValueKind.String);
+                Registry.SetValue(keyPath, PasswordKey, Password, RegistryValueKind.String);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return false;
+            }
         }
     }
 }

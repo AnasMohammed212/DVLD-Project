@@ -27,7 +27,7 @@ namespace DVLD.Login
         private void frmLogin_Load(object sender, EventArgs e)
         {
             string UserName = "", Password = "";
-            if(clsGlobal.GetStoredCredential(ref UserName,ref Password))
+            if(clsGlobal.GetStoredCredentialFromRegistry(ref UserName,ref Password))
             {
                 txtUserName.Text = UserName;
                 txtPassword.Text = Password;
@@ -49,11 +49,11 @@ namespace DVLD.Login
             {
                 if (chkRememberMe.Checked)
                 {
-                    clsGlobal.RememberUsernameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+                    clsGlobal.RememberUsernameAndPasswordUsingRegistry(txtUserName.Text.Trim(), txtPassword.Text.Trim());
                 }
                 else
                 {
-                    clsGlobal.RememberUsernameAndPassword("", "");
+                    clsGlobal.RememberUsernameAndPasswordUsingRegistry("", "");
                 }
                 if (!User.IsActive)
                 {
