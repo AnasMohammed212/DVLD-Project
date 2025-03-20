@@ -238,6 +238,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tests\Controls\ctrlScheduledTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -405,14 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Tests\Controls\ctrlScheduledTest.resx">
       <DependentUpon>ctrlScheduledTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -758,6 +758,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Address 32.png" />
+    <None Include="Resources\file-setting-icon1.png" />
     <None Include="Resources\Driver License.png" />
     <None Include="Resources\Country 321.png" />
     <None Include="Resources\Phone 32.png" />

@@ -241,7 +241,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(90, 25);
             this.label15.TabIndex = 129;
-            this.label15.Text = "Gendor:";
+            this.label15.Text = "Gender:";
             // 
             // lblPersonID
             // 

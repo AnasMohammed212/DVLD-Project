@@ -52,13 +52,13 @@
             // 
             this.ctrlUserCard1.Location = new System.Drawing.Point(17, 12);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(948, 611);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(948, 476);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // txtCurrentPassword
             // 
             this.txtCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentPassword.Location = new System.Drawing.Point(232, 676);
+            this.txtCurrentPassword.Location = new System.Drawing.Point(231, 509);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
             this.txtCurrentPassword.Size = new System.Drawing.Size(165, 28);
             this.txtCurrentPassword.TabIndex = 1;
@@ -67,7 +67,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Password_32;
-            this.pictureBox1.Location = new System.Drawing.Point(197, 674);
+            this.pictureBox1.Location = new System.Drawing.Point(196, 507);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 28);
             this.pictureBox1.TabIndex = 2;
@@ -76,7 +76,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD.Properties.Resources.Password_32;
-            this.pictureBox2.Location = new System.Drawing.Point(197, 724);
+            this.pictureBox2.Location = new System.Drawing.Point(196, 557);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 28);
             this.pictureBox2.TabIndex = 4;
@@ -85,7 +85,7 @@
             // txtNewPassword
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(232, 726);
+            this.txtNewPassword.Location = new System.Drawing.Point(231, 559);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(165, 28);
             this.txtNewPassword.TabIndex = 3;
@@ -94,7 +94,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DVLD.Properties.Resources.Password_32;
-            this.pictureBox3.Location = new System.Drawing.Point(197, 776);
+            this.pictureBox3.Location = new System.Drawing.Point(196, 609);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 28);
             this.pictureBox3.TabIndex = 6;
@@ -103,7 +103,7 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(232, 778);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(231, 611);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(165, 28);
             this.txtConfirmPassword.TabIndex = 5;
@@ -113,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 677);
+            this.label1.Location = new System.Drawing.Point(17, 510);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 7;
@@ -123,7 +123,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 779);
+            this.label2.Location = new System.Drawing.Point(17, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 727);
+            this.label3.Location = new System.Drawing.Point(17, 560);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 25);
             this.label3.TabIndex = 9;
@@ -142,7 +142,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(819, 760);
+            this.btnSave.Location = new System.Drawing.Point(818, 593);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(131, 44);
             this.btnSave.TabIndex = 15;
@@ -153,7 +153,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(682, 760);
+            this.btnClose.Location = new System.Drawing.Point(681, 593);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(131, 44);
             this.btnClose.TabIndex = 14;
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(971, 834);
+            this.ClientSize = new System.Drawing.Size(971, 661);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label3);

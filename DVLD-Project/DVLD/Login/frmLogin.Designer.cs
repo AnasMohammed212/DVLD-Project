@@ -1,4 +1,5 @@
-﻿namespace DVLD.Login
+﻿using DVLD.Properties;
+namespace DVLD.Login
 {
     partial class frmLogin
     {
@@ -168,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 396);
+            this.ClientSize = new System.Drawing.Size(738, 396);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chkRememberMe);
             this.Controls.Add(this.pictureBox3);
