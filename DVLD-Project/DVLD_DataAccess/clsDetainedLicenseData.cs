@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 namespace DVLD_DataAccess
 {
     public class clsDetainedLicenseData
@@ -74,6 +74,7 @@ namespace DVLD_DataAccess
             catch (Exception ex)
             {
                 isFound = false;
+                clsGlobal.ExceptionHandling(ex.Message,EventLogEntryType.Error);
             }
             finally
             {
@@ -147,6 +148,7 @@ namespace DVLD_DataAccess
             catch (Exception ex)
             {
                 isFound = false;
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
             finally
             {
@@ -183,6 +185,7 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
             finally
             {
@@ -239,6 +242,7 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -283,6 +287,7 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
                 return false;
             }
 
@@ -322,6 +327,7 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
                 return false;
             }
 
@@ -362,6 +368,7 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
 
             finally
