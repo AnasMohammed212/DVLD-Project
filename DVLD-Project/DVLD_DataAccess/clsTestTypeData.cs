@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace DVLD_DataAccess
 {
@@ -30,8 +31,6 @@ namespace DVLD_DataAccess
 
                 if (reader.Read())
                 {
-
-                    // The record was found
                     isFound = true;
 
                     TestTypeTitle = (string)reader["TestTypeTitle"];
@@ -41,7 +40,6 @@ namespace DVLD_DataAccess
                 }
                 else
                 {
-                    // The record was not found
                     isFound = false;
                 }
 
@@ -51,7 +49,7 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
                 isFound = false;
             }
             finally
@@ -91,7 +89,7 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
             finally
             {
@@ -133,8 +131,7 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -174,7 +171,7 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsGlobal.ExceptionHandling(ex.Message, EventLogEntryType.Error);
                 return false;
             }
 
