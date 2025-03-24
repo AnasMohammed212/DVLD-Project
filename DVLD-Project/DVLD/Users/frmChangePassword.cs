@@ -49,7 +49,6 @@ namespace DVLD.Users
         {
             if (!this.ValidateChildren())
             {
-                //Here we dont continue becuase the form is not valid
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -76,7 +75,7 @@ namespace DVLD.Users
             }
             else
                 errorProvider1.SetError(txtCurrentPassword, null);
-            if (_User.Password != txtCurrentPassword.Text.Trim())
+            if (_User.Password != clsUser.ComputeHash(txtCurrentPassword.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCurrentPassword, "Current password is wrong!");

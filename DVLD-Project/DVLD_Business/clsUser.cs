@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DVLD_DataAccess;
@@ -71,14 +72,23 @@ namespace DVLD_Business
             else
                 return null;
         }
+        public static string ComputeHash(string input)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+                return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+            }
+        }
         private bool _AddNewUser()
         {
-            this.UserID = clsUserData.AddNewUser(this.PersonID,this.UserName,this.Password,this.IsActive);
+            this.UserID = clsUserData.AddNewUser(this.PersonID,this.UserName,ComputeHash(this.Password),this.IsActive);
             return (this.UserID != -1);
         }
         private bool _UpdateUser()
         {
-            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName,this.Password,this.IsActive);
+            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName, ComputeHash(this.Password), this.IsActive);
         }
         public bool Save()
         {

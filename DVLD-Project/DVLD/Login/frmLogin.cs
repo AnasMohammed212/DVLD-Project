@@ -44,12 +44,15 @@ namespace DVLD.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            clsUser User = clsUser.FindByUserNameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+            clsUser User = clsUser.FindByUserNameAndPassword(txtUserName.Text.Trim(), clsUser.ComputeHash(txtPassword.Text.Trim()));
             if (User != null)
             {
                 if (chkRememberMe.Checked)
                 {
-                    clsGlobal.RememberUsernameAndPasswordUsingRegistry(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+                    clsGlobal.RememberUsernameAndPasswordUsingRegistry(txtUserName.Text.Trim(), clsUser.ComputeHash(txtPassword.Text.Trim()));
+
+                    clsGlobal.RememberUsernameAndPassword(txtUserName.Text, txtPassword.Text);
+                    clsUser.ComputeHash(txtPassword.Text);
                 }
                 else
                 {

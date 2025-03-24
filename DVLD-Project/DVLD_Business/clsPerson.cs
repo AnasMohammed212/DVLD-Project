@@ -70,7 +70,7 @@ namespace DVLD_Business
             this.NationalityCountryID = NationalityCountryID;
             this.ImagePath = ImagePath;
             this.CountryInfo = clsCountry.Find(NationalityCountryID);
-            Mode= enMode.Update;
+            //Mode= enMode.Update;
         }
 
         public static clsPerson Find(int PersonID)

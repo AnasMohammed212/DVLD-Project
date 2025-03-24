@@ -86,8 +86,7 @@ namespace DVLD_Business
 
         private bool _AddNewLicense()
         {
-            //call DataAccess Layer 
-
+            
             this.LicenseID = clsLicenseData.AddNewLicense(this.ApplicationID, this.DriverID, this.LicenseClass,
                this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees,
                this.IsActive, (byte)this.IssueReason, this.CreatedByUserID);
